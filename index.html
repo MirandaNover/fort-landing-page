@@ -27,6 +27,9 @@
       .swiper-pagination-bullet { background: #FDBA74; opacity: .5; }
       .swiper-pagination-bullet-active { background: #F97316; opacity: 1; }
       .swiper .swiper-pagination { position: static !important; margin-top: 1rem; display: flex; justify-content: center; gap: 8px; }
+
+      /* Hide Mailchimp default response messages */
+      #mce-success-response, #mce-error-response { display: none !important; }
     </style>
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden">
@@ -329,18 +332,38 @@
     <script>
       (() => {
       const successEl = document.getElementById('mce-success-response');
+      const errorEl = document.getElementById('mce-error-response');
       const custom = document.getElementById('mc-custom-success');
       const form = document.getElementById('mc-embedded-subscribe-form');
-      if (successEl && custom) {
-        const showSuccess = () => {
-          if (successEl.style.display !== 'none' && successEl.textContent.trim().length > 0) {
-            custom.classList.remove('hidden');
-            if (form) form.classList.add('opacity-60', 'pointer-events-none');
+      if (!custom) return;
+      custom.setAttribute('role','status');
+      custom.setAttribute('aria-live','polite');
+
+      const showCustom = (title, message) => {
+        const h3 = custom.querySelector('h3');
+        const p = custom.querySelector('p');
+        if (h3) h3.textContent = title;
+        if (p) p.textContent = message;
+        custom.classList.remove('hidden');
+        if (form) form.classList.add('opacity-60', 'pointer-events-none');
+      };
+
+      const handler = () => {
+        if (successEl && successEl.textContent.trim().length > 0) {
+          const raw = successEl.textContent.trim();
+          const lower = raw.toLowerCase();
+          if (lower.includes('already subscribed')) {
+            showCustom("You're already on the list", 'You are all set. We will keep you posted when early access opens.');
+          } else {
+            showCustom("You're on the list!", 'Thanks for signing up. We will email you as soon as early access opens.');
           }
-        };
-        const obs = new MutationObserver(showSuccess);
-        obs.observe(successEl, { attributes: true, childList: true, subtree: true });
-      }
+        } else if (errorEl && errorEl.textContent.trim().length > 0) {
+          showCustom('Please check your email', errorEl.textContent.trim());
+        }
+      };
+
+      const obsTargets = [successEl, errorEl].filter(Boolean);
+      obsTargets.forEach(el => new MutationObserver(handler).observe(el, { attributes: true, childList: true, subtree: true }));
     })();
     </script>
 
