@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fort Landing Page</title>
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="images/icon.svg" color="#000000">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
+        <nav class="bg-black bg-opacity-50 backdrop-blur-md rounded-full px-6 py-3 flex items-center justify-between w-full max-w-4xl">
+            <div class="flex items-center">
+                <img src="images/fort-f-logo.svg" alt="Fort F Logo" class="h-6 brightness-0 invert" />
+            </div>
+            <a href="#waitlist" class="bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors">Join Waitlist</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-start pt-32 bg-transparent">
+      <div class="container mx-auto px-6">
+        <div class="mb-12 md:mb-24 lg:mb-48 text-center">
+          <img
+            src="images/fort-spellout-logo.svg"
+            alt="Fort - Strength Training Wearable"
+            class="h-11 md:h-14 w-auto invert inline-block"
+          />
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <div class="relative w-full md:w-3/5 flex items-center justify-center md:justify-start">
+            <img
+              src="images/fort-topiso.png"
+              alt="Fort wearable device"
+              class="w-full h-auto md:max-h-[70vh] object-contain scale-[0.85]"
+            />
+          </div>
+          <div class="relative z-10 md:w-2/5 text-center md:text-left md:pl-8">
+            <h1 class="text-[clamp(1.5rem,6vw,4.5rem)] font-normal leading-[1.05] mb-6 md:mb-8 py-2 text-black max-w-[16ch]">
+              Designed for strength training.
+            </h1>
+            <p class="text-[clamp(0.9rem,2.2vw,1.5rem)] mb-8 text-gray-600 max-w-xl mx-auto md:mx-0">
+              The data and insights you need to build muscle, get stronger, and prevent injury.
+            </p>
+            <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-start">
+              <a href="#waitlist" class="bg-orange-500 hover:bg-orange-600 text-white py-1.5 px-4 sm:px-5 sm:py-2 md:py-3 md:px-8 rounded-lg transition duration-300 transform hover:scale-105 inline-block text-xs sm:text-sm md:text-base lg:text-lg whitespace-nowrap">
+                Get Early Access
+              </a>
+              <a href="#benefits" class="border border-orange-500 hover:bg-orange-500 hover:text-white text-orange-500 py-1.5 px-4 sm:px-5 md:py-3 md:px-8 rounded-lg transition duration-300 inline-block cursor-pointer text-xs sm:text-sm md:text-base lg:text-lg whitespace-nowrap">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section (Benefits) -->
+    <section id="benefits" class="pt-16 pb-20 bg-transparent">
+      <div class="container mx-auto px-6">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide px-4">
+              <div class="bg-white/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition duration-300 h-96 flex flex-col justify-between p-8">
+                <h3 class="text-xl font-semibold text-black mb-3">Build Muscle and Strength</h3>
+                <p class="text-gray-600">Strength training is a vital part of a healthy lifestyle. Fort is purpose-built to help you get the most out of every workout.</p>
+              </div>
+            </div>
+            <div class="swiper-slide px-4">
+              <div class="bg-white/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition duration-300 h-96 flex flex-col justify-between p-8">
+                <h3 class="text-xl font-semibold text-black mb-3">Track Workouts Automatically</h3>
+                <p class="text-gray-600">Fort learns your training plan and automatically counts your reps. Focus on your workout, not on manual logging.</p>
+              </div>
+            </div>
+            <div class="swiper-slide px-4">
+              <div class="bg-white/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition duration-300 h-96 flex flex-col justify-between p-8">
+                <h3 class="text-xl font-semibold text-black mb-3">Train With Better Form</h3>
+                <p class="text-gray-600">Real-time feedback on your depth, tempo, and control, all based on actual sensor data, takes the guesswork out of lifting.</p>
+              </div>
+            </div>
+            <div class="swiper-slide px-4">
+              <div class="bg-white/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition duration-300 h-96 flex flex-col justify-between p-8">
+                <h3 class="text-xl font-semibold text-black mb-3">Optimize Your Workout Plan</h3>
+                <p class="text-gray-600">Fort uses sensor data and AI to tell you which exercises work best for your unique body and goals, and when to push harder or back off.</p>
+              </div>
+            </div>
+            <div class="swiper-slide px-4">
+              <div class="bg-white/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition duration-300 h-96 flex flex-col justify-between p-8">
+                <h3 class="text-xl font-semibold text-black mb-3">Celebrate Progress</h3>
+                <p class="text-gray-600">We help you see how far you’ve come and plan for the future with intelligent insights on how to gradually increase the challenge of your workouts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <p class="text-2xl text-black mx-auto">Fort translates complex sensor data into simple, beautiful summaries of your training.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <img src="images/screenshots/ai-generated-summary.svg" alt="Insight example 1" class="rounded-xl shadow-lg" />
+          <img src="images/screenshots/one-rep-max-chart.svg" alt="Insight example 2" class="rounded-xl shadow-lg" />
+          <img src="images/screenshots/workouts-completed.svg" alt="Insight example 3" class="rounded-xl shadow-lg" />
+          <img src="images/screenshots/top-exercises.svg" alt="Insight example 4" class="rounded-xl shadow-lg" />
+          <img src="images/screenshots/recovery-notification.svg" alt="Insight example 5" class="rounded-xl shadow-lg" />
+          <img src="images/screenshots/bicep-curls-tracking.svg" alt="Insight example 6" class="rounded-xl shadow-lg" />
+          <img src="images/screenshots/muscle-activation-graph.svg" alt="Insight example 7" class="rounded-xl shadow-lg" />
+          <img src="images/screenshots/form-card.svg" alt="Insight example 8" class="rounded-xl shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-left mb-16">
+          <h2 class="text-4xl md:text-5xl font-sans font-normal text-black mb-4">How Fort Works</h2>
+          <p class="text-xl text-gray-600 max-w-3xl">Move beyond heart rate monitoring with advanced sensors that measure muscle activity and fatigue.</p>
+        </div>
+        <div class="flex flex-col items-center space-y-8">
+          <img src="images/system-overview.png" alt="System overview" class="w-full rounded-lg shadow-lg mb-12" />
+          <div class="flex flex-col md:flex-row items-start gap-12 w-full">
+            <div class="md:w-1/2">
+              <p class="text-xl text-gray-600 indent-8">
+                Fort combines muscle sensors (EMG) and motion sensors (IMU) in a small wearable. It measures how your muscles fire, how deep you squat, how fast you lift, and how your body responds. It records contractions, range of motion, rep speed, stability, oxygenation, heart rate, and fatigue, then fuses those signals into meaningful metrics like neuromuscular efficiency, velocity loss, and form consistency. These metrics are compared against exercise-specific profiles of good technique to flag short range, rushed eccentrics, momentum, or breakdown. Finally, Fort translates everything into simple and actionable feedback with clear cues, fatigue markers, and progress trends so you can train smarter, protect your form, and see measurable improvement over time.
+              </p>
+            </div>
+            <div class="md:w-1/2">
+              <img src="images/device-bottom.png" alt="Device bottom view" class="w-full rounded-lg shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mailing List Signup -->
+    <section id="waitlist" class="py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Waitlist</h2>
+            <p class="mb-8">Be the first to know when we launch.</p>
+            <form action="YOUR_MAILCHIMP_ACTION_URL" method="POST" class="max-w-md mx-auto">
+                <div class="flex">
+                    <input type="email" name="EMAIL" class="w-full px-4 py-2 border border-gray-300 rounded-l-full" placeholder="Enter your email" required>
+                    <button type="submit" class="bg-orange-500 text-white px-6 py-2 rounded-r-full font-semibold hover:bg-orange-600 transition-colors">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center">
+                <div class="w-1/2">
+                    <img src="https://via.placeholder.com/400x400" alt="About Us" class="rounded-full mx-auto">
+                </div>
+                <div class="w-1/2 pl-8">
+                    <h2 class="text-3xl font-bold mb-4">About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a est. Phasellus tincidunt, ante nec consectetur dapibus, eros massa auctor nunc, a scelerisque nisi quam quis sem. Nulla facilisi. In hac habitasse platea dictumst.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-orange-500">Twitter</a>
+                <a href="#" class="hover:text-orange-500">LinkedIn</a>
+                <a href="#" class="hover:text-orange-500">Contact</a>
+            </div>
+            <p>&copy; 2025 Fort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS + init -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        speed: 500,
+        loop: false,
+        spaceBetween: 16,
+        slidesPerView: 3,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        allowTouchMove: true,
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
+</body>
+</html>
