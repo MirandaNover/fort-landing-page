@@ -59,7 +59,10 @@
             <div class="flex items-center">
                 <img src="images/fort-f-logo.svg" alt="Fort F Logo" class="h-6 brightness-0 invert" />
             </div>
-            <a href="#waitlist" class="bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors">Join Waitlist</a>
+            <div class="flex items-center gap-4">
+              <a href="#benefits" class="text-white/90 hover:text-white transition-colors">Learn More</a>
+              <a href="#waitlist" class="bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors">Join Waitlist</a>
+            </div>
         </nav>
     </header>
 
@@ -86,15 +89,19 @@
               Designed for strength training.
             </h1>
             <p class="text-[clamp(0.9rem,2.2vw,1.5rem)] mb-8 text-gray-600 max-w-xl mx-auto md:mx-0">
-              Real-time form, rep velocity, and fatigue measured from your muscles, not guesses.
+              Your muscles are a vital part of your health. Fort helps you build strength safely and efficiently with clear feedback during sets and simple insights that guide every workout.
             </p>
             <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-start">
-              <a href="#waitlist" class="bg-orange-500 hover:bg-orange-600 text-white py-1.5 px-4 sm:px-5 sm:py-2 md:py-3 md:px-8 rounded-lg transition duration-300 transform hover:scale-105 inline-block text-xs sm:text-sm md:text-base lg:text-lg whitespace-nowrap">
-                Get Early Access
-              </a>
-              <a href="#benefits" class="border border-orange-500 hover:bg-orange-500 hover:text-white text-orange-500 py-1.5 px-4 sm:px-5 md:py-3 md:px-8 rounded-lg transition duration-300 inline-block cursor-pointer text-xs sm:text-sm md:text-base lg:text-lg whitespace-nowrap">
-                Learn More
-              </a>
+              <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form-hero" name="mc-embedded-subscribe-form-hero" class="validate w-full md:w-auto" target="_blank" novalidate>
+                <div class="w-full flex items-stretch gap-2">
+                  <label for="hero-email" class="sr-only">Email address</label>
+                  <input type="email" value="" name="EMAIL" id="hero-email" placeholder="Enter your email" required autocomplete="email" inputmode="email" class="flex-1 min-w-0 w-full h-12 px-4 border border-gray-300 rounded-lg md:rounded-l-lg md:rounded-r-none text-base placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500" />
+                  <button type="submit" id="mc-embedded-subscribe-hero" aria-label="Join waitlist" class="h-12 px-6 rounded-lg md:rounded-r-lg md:rounded-l-none bg-orange-500 hover:bg-orange-600 text-white font-medium text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 whitespace-nowrap border border-transparent">Get Early Access</button>
+                </div>
+                <div style="position:absolute;left:-5000px;" aria-hidden="true">
+                  <input type="text" name="b_669f4d4ef22e91de883061574_b3906d91a3" tabindex="-1" value="">
+                </div>
+              </form>
             </div>
             <div class="mt-6 md:mt-8 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-xs text-gray-500">
             </div>
@@ -103,7 +110,7 @@
       </div>
     </section>
 
-    <!-- Features Section (Benefits) -->
+    <!-- Features Section (slider) -->
     <section id="benefits" class="pt-6 md:pt-8 pb-16 bg-transparent">
       <div class="container mx-auto px-6">
         <div class="swiper">
@@ -173,16 +180,52 @@
       </div>
     </section>
 
-    <!-- Insights Section -->
+    <!-- Insights section will appear below the Features slider -->
     <section id="insights" class="py-20 bg-transparent">
       <div class="container mx-auto px-6">
-        <div class="mx-auto max-w-6xl rounded-2xl bg-white shadow-xl ring-1 ring-black/5 p-8 md:p-12">
-          <div class="text-center mb-10 md:mb-12">
-            <p class="text-2xl text-black mx-auto">Your training at a glance: depth, velocity, fatigue, and progress.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-x-6 items-start">
+          <div class="lg:sticky lg:top-24">
+            <img src="images/device-phone.png" loading="lazy" alt="Fort app on phone showing training overview" class="rounded-xl w-full h-auto" />
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <img src="images/device-phone.png" alt="Fort device and phone interface" class="rounded-xl w-full h-[32rem] md:h-[40rem] object-contain" />
-            <img src="images/our-metrics.png" alt="Fort metrics dashboard highlighting depth, velocity, and fatigue" class="rounded-xl w-full h-[32rem] md:h-[40rem] object-contain" />
+          <div class="space-y-6">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-normal">Progress you can feel, without the guesswork</h2>
+              <p class="text-gray-600 mt-2">Your training at a glance—Quality, Progress, and Readiness—so you know how you moved, how you’re improving, and when to push or recover.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+              <!-- Quality card with icon -->
+              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 flex items-start gap-4">
+                <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
+                  <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/quality-icon.svg') no-repeat center / contain; mask: url('images/icons/quality-icon.svg') no-repeat center / contain;"></span>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">Quality</div>
+                  <p class="text-gray-800">We track your form (tempo, range of motion, muscle activation), consistency, and balance across muscle groups to give you a clear picture of workout quality, not just effort.</p>
+                </div>
+              </div>
+
+              <!-- Progress card with icon -->
+              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 flex items-start gap-4">
+                <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
+                  <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/progress-icon.svg') no-repeat center / contain; mask: url('images/icons/progress-icon.svg') no-repeat center / contain;"></span>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">Progress</div>
+                  <p class="text-gray-800">Real progress goes beyond numbers on a barbell. See how your strength, efficiency, and movement patterns improve over time, with lower strain for the same output.</p>
+                </div>
+              </div>
+
+              <!-- Readiness card with icon -->
+              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 flex items-start gap-4">
+                <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
+                  <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/readiness-icon.svg') no-repeat center / contain; mask: url('images/icons/readiness-icon.svg') no-repeat center / contain;"></span>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">Readiness</div>
+                  <p class="text-gray-800">Recovery is vital. By factoring in training intensity, fatigue, and sleep data, we’ll tell you when different muscle groups are primed to train again.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -193,13 +236,13 @@
       <div class="container mx-auto px-6">
         <header class="text-left mb-10 md:mb-12">
           <h2 id="how-works-heading" class="text-4xl md:text-5xl font-sans font-normal text-black mb-4">How Fort Works</h2>
-          <p class="text-xl text-gray-700 max-w-3xl">We capture muscle activation, oxygenation, and movement, then turn that into coaching you can use during the set.</p>
+          <p class="text-xl text-gray-700 max-w-3xl">Fort turns five signals—temperature, heart rate (PPG), motion, muscle activation (sEMG), and oxygenation (NIRS)—into simple metrics that support wellness, reduce friction, and show real progress every session.</p>
         </header>
         
         <ol role="list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
             <h3 class="text-2xl font-medium tracking-tight text-black mb-2">1) Sense</h3>
-            <p class="text-gray-700">sEMG shows how hard a muscle is firing. NIRS shows the oxygen available to that muscle. The IMU captures depth and speed.</p>
+            <p class="text-gray-700">We measure how hard your muscles are working, how much oxygen they have, and how you move, like depth and speed.</p>
           </li>
           <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
             <h3 class="text-2xl font-medium tracking-tight text-black mb-2">2) Understand</h3>
@@ -207,7 +250,7 @@
           </li>
           <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
             <h3 class="text-2xl font-medium tracking-tight text-black mb-2">3) Act</h3>
-            <p class="text-gray-700">Clear cues during the set and weekly insights help you choose load, volume, and technique with confidence.</p>
+            <p class="text-gray-700">Real-time insights, daily feedback, weekly trends, and monthly learnings fuel progress. Fort helps you choose load, volume, and technique with confidence.</p>
           </li>
         </ol>
 
@@ -221,8 +264,7 @@
     <section id="waitlist" class="py-20 bg-transparent">
         <div class="container mx-auto px-4">
           <div class="mx-auto max-w-2xl rounded-2xl bg-white shadow-xl ring-1 ring-black/5 p-8 md:p-10">
-            <h2 class="text-3xl font-bold mb-2 text-center">Be first to train with Fort</h2>
-            <p class="mb-6 text-gray-600 text-center">No spam. Early access invites ship in waves.</p>
+            <h2 class="text-3xl font-bold mb-6 text-center">Be first to train with Fort</h2>
 
             <div id="mc_embed_signup" class="mx-auto">
               <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -257,11 +299,40 @@
     </section>
 
     <!-- About Us Section -->
-    <section class="py-20 bg-black/50 backdrop-blur-sm text-white">
+    <section class="py-20 bg-black/90 backdrop-blur-md text-white">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-center">
                 <div class="w-1/2">
-                    <img src="https://via.placeholder.com/400x400" alt="About Us" class="rounded-full mx-auto">
+                    <div class="flex items-start justify-center gap-10 sm:gap-14 md:gap-16">
+                      <figure class="flex flex-col items-start text-left">
+                        <img src="images/me-headshot.jpeg" alt="Miranda headshot" loading="lazy" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover shadow-lg" />
+                        <figcaption class="mt-3 w-24 sm:w-28 md:w-32">
+                          <div class="text-sm sm:text-base font-medium text-white">Miranda Nover</div>
+                          <div class="mt-0.5 flex items-center justify-between">
+                            <div class="text-xs sm:text-sm text-gray-300">CEO</div>
+                            <a href="https://www.linkedin.com/in/mirandanover" aria-label="LinkedIn profile" class="text-gray-300 hover:text-white transition-colors">
+                              <svg viewBox="0 0 16 16" fill="currentColor" width="1em" height="1em" aria-hidden="true" focusable="false">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6H2.542v7.5h2.401zm-1.2-8.575c.837 0 1.356-.554 1.356-1.248-.015-.709-.519-1.248-1.342-1.248-.823 0-1.356.539-1.356 1.248 0 .694.519 1.248 1.327 1.248h.015zM13.5 13.5V9.359c0-2.209-1.18-3.238-2.751-3.238-1.27 0-1.845.7-2.165 1.193V6H6.182c.03.679 0 7.5 0 7.5h2.402v-4.19c0-.224.016-.447.082-.607.18-.447.59-.912 1.277-.912.902 0 1.264.689 1.264 1.701V13.5H13.5z"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </figcaption>
+                      </figure>
+                      <figure class="flex flex-col items-start text-left">
+                        <img src="images/paul-headshot.jpeg" alt="Paul headshot" loading="lazy" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover shadow-lg" />
+                        <figcaption class="mt-3 w-24 sm:w-28 md:w-32">
+                          <div class="text-sm sm:text-base font-medium text-white">Paul Schneider</div>
+                          <div class="mt-0.5 flex items-center justify-between">
+                            <div class="text-xs sm:text-sm text-gray-300">CTO</div>
+                            <a href="https://www.linkedin.com/in/paulcschneider" aria-label="LinkedIn profile" class="text-gray-300 hover:text-white transition-colors">
+                              <svg viewBox="0 0 16 16" fill="currentColor" width="1em" height="1em" aria-hidden="true" focusable="false">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6H2.542v7.5h2.401zm-1.2-8.575c.837 0 1.356-.554 1.356-1.248-.015-.709-.519-1.248-1.342-1.248-.823 0-1.356.539-1.356 1.248 0 .694.519 1.248 1.327 1.248h.015zM13.5 13.5V9.359c0-2.209-1.18-3.238-2.751-3.238-1.27 0-1.845.7-2.165 1.193V6H6.182c.03.679 0 7.5 0 7.5h2.402v-4.19c0-.224.016-.447.082-.607.18-.447.59-.912 1.277-.912.902 0 1.264.689 1.264 1.701V13.5H13.5z"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
                 </div>
                 <div class="w-1/2 pl-8">
                     <h2 class="text-3xl font-bold mb-4 text-white">About Us</h2>
@@ -272,7 +343,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-white py-12 bg-black/60 backdrop-blur-sm">
+    <footer class="text-white py-12 bg-black/90 backdrop-blur-md">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-4">
                 <a href="#" class="hover:text-orange-500">Twitter</a>
