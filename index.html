@@ -24,11 +24,21 @@
         background-color: #F3EFEA;
         -webkit-overflow-scrolling: touch;
       }
+      /* Smooth white section fade top & bottom */
+      .fade-white {
+        background:
+          linear-gradient(to bottom, #F3EFEA 0%, #ffffff 60%) top/100% 60px no-repeat,
+          linear-gradient(to top, #F3EFEA 0%, #ffffff 60%) bottom/100% 60px no-repeat,
+          #ffffff;
+      }
       /* Swiper polish */
       .swiper { overflow: hidden; overscroll-behavior: contain; touch-action: pan-x; }
       .swiper-pagination-bullet { background: #FDBA74; opacity: .5; }
       .swiper-pagination-bullet-active { background: #F97316; opacity: 1; }
-      .swiper .swiper-pagination { position: static !important; margin-top:
+      /* Ensure pagination is positioned below the cards */
+      .swiper .swiper-pagination { position: static !important; margin-top: 1rem; display: flex; justify-content: center; gap: 8px; }
+      .swiper-wrapper { align-items: stretch; }
+      .swiper-slide { display: flex; }
 
       /* Hide Mailchimp default response messages */
       #mce-success-response, #mce-error-response { display: none !important; }
@@ -37,6 +47,8 @@
       #mc_embed_signup .button { background-color: #F97316 !important; border: none !important; height: 3.5rem !important; }
       #mc_embed_signup .button:hover { background-color: #EA580C !important; }
       #mc_embed_signup input.email { height: 3.5rem !important; }
+
+      .feature-card { height: auto !important; }
     </style>
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden">
@@ -97,46 +109,61 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide px-4 group">
-              <div class="p-[1px] rounded-2xl bg-gradient-to-br from-orange-400/30 via-transparent to-orange-500/30">
-                <div class="min-h-80 md:min-h-96 rounded-2xl bg-white/80 backdrop-blur-md border border-white/50 ring-1 ring-black/5 shadow-lg shadow-black/[0.06] p-6 md:p-8 flex flex-col justify-between transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.08] hover:ring-orange-500/20">
-                  <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black mb-4">Build Muscle and Strength</h3>
-                  <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Strength training is a vital part of a healthy lifestyle. Fort is purpose-built to help you get the most out of every workout.</p>
+              <div class="h-full">
+                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Build Muscle and Strength</h3>
+                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Strength training is a vital part of a healthy lifestyle. Fort is purpose-built to help you get the most out of every workout.</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide px-4 group">
-              <div class="p-[1px] rounded-2xl bg-gradient-to-br from-orange-400/30 via-transparent to-orange-500/30">
-                <div class="min-h-80 md:min-h-96 rounded-2xl bg-white/80 backdrop-blur-md border border-white/50 ring-1 ring-black/5 shadow-lg shadow-black/[0.06] p-6 md:p-8 flex flex-col justify-between transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.08] hover:ring-orange-500/20">
-                  <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black mb-4">Stop manual logging</h3>
-                  <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort auto‑detects sets, reps, and range of motion, so you can focus on lifting.</p>
+              <div class="h-full">
+                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Stop manual logging</h3>
+                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort auto‑detects sets, reps, and range of motion, so you can focus on lifting.<br></p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide px-4 group">
-              <div class="p-[1px] rounded-2xl bg-gradient-to-br from-orange-400/30 via-transparent to-orange-500/30">
-                <div class="min-h-80 md:min-h-96 rounded-2xl bg-white/80 backdrop-blur-md border border-white/50 ring-1 ring-black/5 shadow-lg shadow-black/[0.06] p-6 md:p-8 flex flex-col justify-between transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.08] hover:ring-orange-500/20">
-                  <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black mb-4">Train with better form</h3>
-                  <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Real‑time feedback on depth, tempo, and control based on sensor data, not guesses.</p>
+              <div class="h-full">
+                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Train with better form</h3>
+                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Real‑time feedback on depth, tempo, and control based on sensor data, not guesses.</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide px-4 group">
-              <div class="p-[1px] rounded-2xl bg-gradient-to-br from-orange-400/30 via-transparent to-orange-500/30">
-                <div class="min-h-80 md:min-h-96 rounded-2xl bg-white/80 backdrop-blur-md border border-white/50 ring-1 ring-black/5 shadow-lg shadow-black/[0.06] p-6 md:p-8 flex flex-col justify-between transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.08] hover:ring-orange-500/20">
-                  <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black mb-4">Optimize Your Workout Plan</h3>
-                  <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort uses sensor data and AI to tell you which exercises work best for your unique body and goals, and when to push harder or back off.</p>
+              <div class="h-full">
+                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Optimize Your Workout Plan</h3>
+                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort uses sensor data and AI to tell you which exercises work best for your unique body and goals, and when to push harder or back off.</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide px-4 group">
-              <div class="p-[1px] rounded-2xl bg-gradient-to-br from-orange-400/30 via-transparent to-orange-500/30">
-                <div class="min-h-80 md:min-h-96 rounded-2xl bg-white/80 backdrop-blur-md border border-white/50 ring-1 ring-black/5 shadow-lg shadow-black/[0.06] p-6 md:p-8 flex flex-col justify-between transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.08] hover:ring-orange-500/20">
-                  <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black mb-4">Celebrate Progress</h3>
-                  <p class="text-[15px] md:text-base leading-relaxed text-gray-600">We help you see how far you’ve come and plan for the future with intelligent insights on how to gradually increase the challenge of your workouts.</p>
+              <div class="h-full">
+                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Celebrate Progress</h3>
+                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">We help you see how far you’ve come and plan for the future with intelligent insights on how to gradually increase the challenge of your workouts.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -147,14 +174,16 @@
     </section>
 
     <!-- Insights Section -->
-    <section id="insights" class="py-20">
+    <section id="insights" class="py-20 bg-transparent">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <p class="text-2xl text-black mx-auto">Your training at a glance: depth, velocity, fatigue, and progress.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <img src="images/device-phone.png" alt="Fort device and phone interface" class="rounded-xl shadow-lg w-full h-auto" />
-          <img src="images/our-metrics.png" alt="Fort metrics dashboard highlighting depth, velocity, and fatigue" class="rounded-xl shadow-lg w-full h-auto" />
+        <div class="mx-auto max-w-6xl rounded-2xl bg-white shadow-xl ring-1 ring-black/5 p-8 md:p-12">
+          <div class="text-center mb-10 md:mb-12">
+            <p class="text-2xl text-black mx-auto">Your training at a glance: depth, velocity, fatigue, and progress.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <img src="images/device-phone.png" alt="Fort device and phone interface" class="rounded-xl w-full h-[32rem] md:h-[40rem] object-contain" />
+            <img src="images/our-metrics.png" alt="Fort metrics dashboard highlighting depth, velocity, and fatigue" class="rounded-xl w-full h-[32rem] md:h-[40rem] object-contain" />
+          </div>
         </div>
       </div>
     </section>
@@ -260,7 +289,7 @@
       const swiper = new Swiper('.swiper', {
         speed: 500,
         loop: false,
-        spaceBetween: 24,
+        spaceBetween: 28,
         slidesPerView: 3,
         pagination: { el: '.swiper-pagination', clickable: true },
         allowTouchMove: true,
@@ -274,6 +303,28 @@
           1024: { slidesPerView: 3 },
         },
       });
+
+      const equalizeFeatureCardsMin = () => {
+        const cards = Array.from(document.querySelectorAll('.feature-card'));
+        if (!cards.length) return;
+        // reset, measure, set min-height
+        cards.forEach(c => c.style.minHeight = '');
+        const max = cards.reduce((m, c) => Math.max(m, c.offsetHeight), 0);
+        cards.forEach(c => c.style.minHeight = max + 'px');
+      };
+      equalizeFeatureCardsMin();
+      window.addEventListener('resize', () => {
+        clearTimeout(window.__cardEqMinT);
+        window.__cardEqMinT = setTimeout(equalizeFeatureCardsMin, 150);
+      });
+      if (swiper && swiper.on) {
+        swiper.on('resize', equalizeFeatureCardsMin);
+        swiper.on('slideChange', equalizeFeatureCardsMin);
+        swiper.on('update', equalizeFeatureCardsMin);
+      }
+
+      // Equal-height script removed to let cards size to content
+      // (kept swiper init above)
     </script>
     <script>
       (() => {
