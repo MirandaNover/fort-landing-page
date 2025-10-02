@@ -15,11 +15,13 @@
       .safe-top { padding-top: var(--safe-top); }
       /* Site background */
       body {
-        background-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%), url('images/background-neutral.png');
-        background-size: 100% 100%, cover;
+        background-image:
+          linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%),
+          linear-gradient(to bottom, #ffffff 0%, #F3EFEA 10%, #F3EFEA 100%);
+        background-size: 100% 100%, 100% 100%;
         background-repeat: no-repeat, no-repeat;
         background-position: center top, center top;
-        background-color: #ffffff;
+        background-color: #F3EFEA;
         -webkit-overflow-scrolling: touch;
       }
       /* Swiper polish */
@@ -30,6 +32,11 @@
 
       /* Hide Mailchimp default response messages */
       #mce-success-response, #mce-error-response { display: none !important; }
+
+      /* Mailchimp button and input styles */
+      #mc_embed_signup .button { background-color: #F97316 !important; border: none !important; height: 3.5rem !important; }
+      #mc_embed_signup .button:hover { background-color: #EA580C !important; }
+      #mc_embed_signup input.email { height: 3.5rem !important; }
     </style>
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden">
@@ -216,33 +223,22 @@
         </figure>
     </section>
 
-    <!-- CTA Banner -->
-    <section class="py-16">
-      <div class="container mx-auto px-6">
-        <div class="rounded-2xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 class="text-2xl md:text-3xl font-normal tracking-tight text-black">Ready to train smarter?</h3>
-            <p class="text-gray-600 mt-1">Join the waitlist and get early access invites.</p>
-          </div>
-          <a href="#waitlist" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium">Get Early Access</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Mailing List Signup -->
-    <section id="waitlist" class="py-20">
-        <div class="container mx-auto px-4 text-center max-w-2xl">
-            <h2 class="text-3xl font-bold mb-3">Be first to train with Fort</h2>
-            <p class="mb-6 text-gray-600">No spam. Early access invites ship in waves.</p>
+    <section id="waitlist" class="py-20 bg-transparent">
+        <div class="container mx-auto px-4">
+          <div class="mx-auto max-w-2xl rounded-2xl bg-white shadow-xl ring-1 ring-black/5 p-8 md:p-10">
+            <h2 class="text-3xl font-bold mb-2 text-center">Be first to train with Fort</h2>
+            <p class="mb-6 text-gray-600 text-center">No spam. Early access invites ship in waves.</p>
 
-            <div id="mc_embed_signup" class="mx-auto" style="margin-left:0;padding-left:0;">
-              <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="margin-left:0;padding-left:0;">
-                <div id="mc_embed_signup_scroll" style="margin-left:0;padding-left:0;">
-                  <div class="w-full flex gap-2 items-stretch" style="margin-bottom:0;margin-left:0;padding-left:0;">
-                    <input type="email" value="" name="EMAIL" class="flex-1 min-w-0 email w-full px-4 py-2 border border-gray-300 rounded-l-lg" id="mce-EMAIL" placeholder="Enter your email" required>
-                    <button type="submit" id="mc-embedded-subscribe" class="px-6 py-2 rounded-r-lg bg-orange-500 hover:bg-orange-600 text-white font-medium">Join Waitlist</button>
+            <div id="mc_embed_signup" class="mx-auto">
+              <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <div class="w-full flex flex-col sm:flex-row gap-3 items-stretch">
+                    <label for="mce-EMAIL" class="sr-only">Email address</label>
+                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Enter your email" required autocomplete="email" inputmode="email" class="email flex-1 min-w-0 w-full h-14 px-4 sm:px-5 border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-lg placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500" />
+                    <button type="submit" id="mc-embedded-subscribe" aria-label="Join waitlist" class="button h-14 px-7 rounded-lg sm:rounded-r-lg sm:rounded-l-none bg-orange-500 hover:bg-orange-600 text-white font-medium text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 w-full sm:w-auto">Join Waitlist</button>
                   </div>
-                  <div class="text-xs text-gray-500 mt-2">We’ll only email you about Fort. Unsubscribe anytime.</div>
+                  <div class="text-xs text-gray-500 mt-2 text-center sm:text-left">We’ll only email you about Fort. Unsubscribe anytime.</div>
                   <span id="mce-responses" class="flex items-center gap-2 mt-3">
                     <span class="response text-red-600 text-sm" id="mce-error-response" style="display:none"></span>
                     <span class="response text-green-700 text-sm" id="mce-success-response" style="display:none"></span>
@@ -254,7 +250,7 @@
               </form>
 
               <!-- Custom inline success state -->
-              <div id="mc-custom-success" class="hidden mt-6 rounded-lg bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
+              <div id="mc-custom-success" class="hidden mt-6 rounded-lg bg-white/90 ring-1 ring-black/5 p-6">
                 <h3 class="text-xl font-medium mb-2">You’re on the list!</h3>
                 <p class="text-gray-600">Thanks for signing up. We’ll email you as soon as early access opens.</p>
               </div>
@@ -262,26 +258,27 @@
 
             <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
             <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+          </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-black/50 backdrop-blur-sm text-white">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-center">
                 <div class="w-1/2">
                     <img src="https://via.placeholder.com/400x400" alt="About Us" class="rounded-full mx-auto">
                 </div>
                 <div class="w-1/2 pl-8">
-                    <h2 class="text-3xl font-bold mb-4">About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a est. Phasellus tincidunt, ante nec consectetur dapibus, eros massa auctor nunc, a scelerisque nisi quam quis sem. Nulla facilisi. In hac habitasse platea dictumst.</p>
+                    <h2 class="text-3xl font-bold mb-4 text-white">About Us</h2>
+                    <p class="text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a est. Phasellus tincidunt, ante nec consectetur dapibus, eros massa auctor nunc, a scelerisque nisi quam quis sem. Nulla facilisi. In hac habitasse platea dictumst.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="text-white py-12 bg-black/60 backdrop-blur-sm">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-4">
                 <a href="#" class="hover:text-orange-500">Twitter</a>
