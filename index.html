@@ -39,6 +39,8 @@
       .swiper .swiper-pagination { position: static !important; margin-top: 1rem; display: flex; justify-content: center; gap: 8px; }
       .swiper-wrapper { align-items: stretch; }
       .swiper-slide { display: flex; }
+      /* Make autoplay motion continuous (linear) */
+      .swiper .swiper-wrapper { transition-timing-function: linear !important; }
 
       /* Hide Mailchimp default response messages */
       #mce-success-response, #mce-error-response { display: none !important; }
@@ -55,7 +57,7 @@
 
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 safe-top">
-        <nav class="bg-black/70 backdrop-blur-md rounded-full px-6 py-3 flex items-center justify-between w-full max-w-4xl ring-1 ring-white/10 shadow-lg shadow-black/20">
+        <nav class="bg-black/70 backdrop-blur-md rounded-xl px-6 py-3 flex items-center justify-between w-full max-w-4xl ring-1 ring-white/10 shadow-lg shadow-black/20">
             <div class="flex items-center">
                 <img src="images/fort-f-logo.svg" alt="Fort F Logo" class="h-6 brightness-0 invert" />
             </div>
@@ -88,8 +90,8 @@
             <h1 class="text-[clamp(1.5rem,6vw,4.5rem)] font-normal leading-[1.05] mb-6 md:mb-8 py-2 text-black max-w-[16ch]">
               Designed for strength training.
             </h1>
-            <p class="text-[clamp(0.9rem,2.2vw,1.5rem)] mb-8 text-gray-600 max-w-xl mx-auto md:mx-0">
-              Your muscles are a vital part of your health. Fort helps you build strength safely and efficiently with clear feedback during sets and simple insights that guide every workout.
+            <p class="text-[clamp(0.9rem,2.2vw,1.5rem)] font-light mb-8 text-gray-600 max-w-xl mx-auto md:mx-0">
+              Build muscle safely and efficiently with simple insights that guide every workout.
             </p>
             <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-start">
               <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form-hero" name="mc-embedded-subscribe-form-hero" class="validate w-full md:w-auto" target="_blank" novalidate>
@@ -110,78 +112,8 @@
       </div>
     </section>
 
-    <!-- Features Section (slider) -->
-    <section id="benefits" class="pt-6 md:pt-8 pb-16 bg-transparent">
-      <div class="container mx-auto px-6">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide px-4 group">
-              <div class="h-full">
-                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Build Muscle and Strength</h3>
-                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Strength training is a vital part of a healthy lifestyle. Fort is purpose-built to help you get the most out of every workout.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide px-4 group">
-              <div class="h-full">
-                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Stop manual logging</h3>
-                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort auto‑detects sets, reps, and range of motion, so you can focus on lifting.<br></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide px-4 group">
-              <div class="h-full">
-                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Train with better form</h3>
-                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Real‑time feedback on depth, tempo, and control based on sensor data, not guesses.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide px-4 group">
-              <div class="h-full">
-                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Optimize Your Workout Plan</h3>
-                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort uses sensor data and AI to tell you which exercises work best for your unique body and goals, and when to push harder or back off.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide px-4 group">
-              <div class="h-full">
-                <div class="relative rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                  <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                  <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                    <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Celebrate Progress</h3>
-                    <p class="text-[15px] md:text-base leading-relaxed text-gray-600">We help you see how far you’ve come and plan for the future with intelligent insights on how to gradually increase the challenge of your workouts.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
     <!-- Insights section will appear below the Features slider -->
-    <section id="insights" class="py-20 bg-transparent">
+    <section id="insights" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-x-6 items-start">
           <div class="lg:sticky lg:top-24">
@@ -190,39 +122,39 @@
           <div class="space-y-6">
             <div>
               <h2 class="text-2xl md:text-3xl font-normal">Progress you can feel, without the guesswork</h2>
-              <p class="text-gray-600 mt-2">Your training at a glance—Quality, Progress, and Readiness—so you know how you moved, how you’re improving, and when to push or recover.</p>
+              <p class="text-gray-600 mt-2">Your training at a glance, so you know how you moved, how you’re improving, and when to push or recover.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
               <!-- Quality card with icon -->
-              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 flex items-start gap-4">
+              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 md:p-6 flex items-center gap-4 shadow-sm">
                 <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
                   <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/quality-icon.svg') no-repeat center / contain; mask: url('images/icons/quality-icon.svg') no-repeat center / contain;"></span>
                 </div>
                 <div>
-                  <div class="text-sm text-gray-500 mb-1">Quality</div>
-                  <p class="text-gray-800">We track your form (tempo, range of motion, muscle activation), consistency, and balance across muscle groups to give you a clear picture of workout quality, not just effort.</p>
+                  <div class="text-base md:text-lg font-medium text-gray-900 mb-1">Quality</div>
+                  <p class="text-gray-800 leading-relaxed">We track your form (tempo, range of motion, muscle activation), consistency, and balance across muscle groups to give you a clear picture of workout quality, not just effort.</p>
                 </div>
               </div>
 
               <!-- Progress card with icon -->
-              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 flex items-start gap-4">
+              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 md:p-6 flex items-center gap-4 shadow-sm">
                 <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
                   <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/progress-icon.svg') no-repeat center / contain; mask: url('images/icons/progress-icon.svg') no-repeat center / contain;"></span>
                 </div>
                 <div>
-                  <div class="text-sm text-gray-500 mb-1">Progress</div>
-                  <p class="text-gray-800">Real progress goes beyond numbers on a barbell. See how your strength, efficiency, and movement patterns improve over time, with lower strain for the same output.</p>
+                  <div class="text-base md:text-lg font-medium text-gray-900 mb-1">Progress</div>
+                  <p class="text-gray-800 leading-relaxed">Real progress goes beyond numbers on a barbell. See how your strength, efficiency, and movement patterns improve over time, with lower strain for the same output.</p>
                 </div>
               </div>
 
               <!-- Readiness card with icon -->
-              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 flex items-start gap-4">
+              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 md:p-6 flex items-center gap-4 shadow-sm">
                 <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
                   <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/readiness-icon.svg') no-repeat center / contain; mask: url('images/icons/readiness-icon.svg') no-repeat center / contain;"></span>
                 </div>
                 <div>
-                  <div class="text-sm text-gray-500 mb-1">Readiness</div>
-                  <p class="text-gray-800">Recovery is vital. By factoring in training intensity, fatigue, and sleep data, we’ll tell you when different muscle groups are primed to train again.</p>
+                  <div class="text-base md:text-lg font-medium text-gray-900 mb-1">Readiness</div>
+                  <p class="text-gray-800 leading-relaxed">Recovery is vital. By factoring in training intensity, fatigue, and sleep data, we’ll tell you when different muscle groups are primed to train again.</p>
                 </div>
               </div>
             </div>
@@ -231,30 +163,114 @@
       </div>
     </section>
 
+    <!-- Features Section (slider) - moved below Insights -->
+    <section id="benefits" class="pt-6 md:pt-8 pb-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="relative">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide px-4 group">
+                <div class="h-full">
+                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Build Muscle and Strength</h3>
+                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Strength training is a vital part of a healthy lifestyle. Fort is purpose-built to help you get the most out of every workout.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide px-4 group">
+                <div class="h-full">
+                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Stop manual logging</h3>
+                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort auto‑detects sets, reps, and range of motion, so you can focus on lifting.<br></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide px-4 group">
+                <div class="h-full">
+                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Train with better form</h3>
+                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Real‑time feedback on depth, tempo, and control based on sensor data, not guesses.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide px-4 group">
+                <div class="h-full">
+                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Optimize Your Workout Plan</h3>
+                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort uses sensor data and AI to tell you which exercises work best for your unique body and goals, and when to push harder or back off.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide px-4 group">
+                <div class="h-full">
+                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
+                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
+                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Celebrate Progress</h3>
+                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">We help you see how far you’ve come and plan for the future with intelligent insights on how to gradually increase the challenge of your workouts.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- Edge fades on white background -->
+          <div class="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-12 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-12 bg-gradient-to-l from-white to-transparent z-10"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- How It Works Section -->
     <section id="how-it-works" aria-labelledby="how-works-heading" class="py-20">
       <div class="container mx-auto px-6">
-        <header class="text-left mb-10 md:mb-12">
-          <h2 id="how-works-heading" class="text-4xl md:text-5xl font-sans font-normal text-black mb-4">How Fort Works</h2>
-          <p class="text-xl text-gray-700 max-w-3xl">Fort turns five signals—temperature, heart rate (PPG), motion, muscle activation (sEMG), and oxygenation (NIRS)—into simple metrics that support wellness, reduce friction, and show real progress every session.</p>
+        <header class="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+          <h2 id="how-works-heading" class="text-2xl md:text-3xl font-normal">How Fort Works</h2>
+          <p class="text-gray-600 mt-2">Fort turns five signals—temperature, heart rate, motion, muscle activation, and oxygenation—into metrics that support wellness, reduce friction, and show real progress every session.</p>
         </header>
         
         <ol role="list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
-            <h3 class="text-2xl font-medium tracking-tight text-black mb-2">1) Sense</h3>
+            <h3 class="text-lg md:text-xl font-medium font-sans mb-2 flex items-center gap-2">
+              <span class="text-orange-600">1</span>
+              <span class="text-black">Sense</span>
+            </h3>
             <p class="text-gray-700">We measure how hard your muscles are working, how much oxygen they have, and how you move, like depth and speed.</p>
           </li>
           <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
-            <h3 class="text-2xl font-medium tracking-tight text-black mb-2">2) Understand</h3>
+            <h3 class="text-lg md:text-xl font-medium font-sans mb-2 flex items-center gap-2">
+              <span class="text-orange-600">2</span>
+              <span class="text-black">Understand</span>
+            </h3>
             <p class="text-gray-700">Signals become rep velocity, range of motion, fatigue, and form consistency. You see what changed and why.</p>
           </li>
           <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
-            <h3 class="text-2xl font-medium tracking-tight text-black mb-2">3) Act</h3>
+            <h3 class="text-lg md:text-xl font-medium font-sans mb-2 flex items-center gap-2">
+              <span class="text-orange-600">3</span>
+              <span class="text-black">Act</span>
+            </h3>
             <p class="text-gray-700">Real-time insights, daily feedback, weekly trends, and monthly learnings fuel progress. Fort helps you choose load, volume, and technique with confidence.</p>
           </li>
         </ol>
 
-        <figure class="w-full mt-10 md:mt-12 mb-10">
+        <figure class="w-full mt-10 md:mt-12 mb-0">
           <img src="images/system-overview-new.png" alt="Diagram of the Fort wearable reading muscle activation with sEMG, oxygenation with NIRS, and movement with an IMU. Signals become depth, velocity, fatigue, and coaching cues." class="w-full rounded-lg shadow-lg" />
           <figcaption class="sr-only">System overview showing sensors and the coaching outputs they create.</figcaption>
         </figure>
@@ -263,10 +279,14 @@
     <!-- Mailing List Signup -->
     <section id="waitlist" class="py-20 bg-transparent">
         <div class="container mx-auto px-4">
-          <div class="mx-auto max-w-2xl rounded-2xl bg-white shadow-xl ring-1 ring-black/5 p-8 md:p-10">
-            <h2 class="text-3xl font-bold mb-6 text-center">Be first to train with Fort</h2>
+          <div class="mx-auto max-w-2xl relative overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 p-8 md:p-10 lg:p-12">
 
-            <div id="mc_embed_signup" class="mx-auto">
+            <header class="text-center">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 text-orange-700 text-xs font-medium ring-1 ring-orange-200 mb-3">Early access</span>
+              <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-black">Be the first to train with Fort</h2>
+            </header>
+
+            <div id="mc_embed_signup" class="mx-auto mt-6 md:mt-8 max-w-xl">
               <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
                   <div class="w-full flex flex-col sm:flex-row gap-3 items-stretch">
@@ -336,7 +356,7 @@
                 </div>
                 <div class="w-1/2 pl-8">
                     <h2 class="text-3xl font-bold mb-4 text-white">About Us</h2>
-                    <p class="text-gray-200">We started Fort to fix a gap: there were no tools that measured strength and the musculoskeletal system with real precision. Founders Paul and Miranda are engineers who built hardware at Tesla. We’ve worked with physical‑therapy patients and clinicians, everyday lifters, longevity enthusiasts, and leading technologists to shape Fort. We’re backed by top venture funds, angel investors, and Carnegie Mellon University.</p>
+                    <p class="text-gray-200">We started Fort out of a frustration that strength training, one of the most important tools for longevity, is underserved by other wearables. We’re both ex-Tesla engineers, and build alongside clinicians, physical‑therapy patients, everyday lifters, and longevity communities. We’re backed by leading venture firms, angel investors, and Carnegie Mellon University.</p>
                 </div>
             </div>
         </div>
@@ -346,9 +366,8 @@
     <footer class="text-white py-12 bg-black/90 backdrop-blur-md">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="hover:text-orange-500">Twitter</a>
-                <a href="#" class="hover:text-orange-500">LinkedIn</a>
-                <a href="#" class="hover:text-orange-500">Contact</a>
+                <a href="https://www.linkedin.com/company/fortfit" class="hover:text-orange-500">LinkedIn</a>
+                <a href="mailto:miranda@fort.cx" class="hover:text-orange-500">Contact</a>
             </div>
             <p>&copy; 2025 Fort. All rights reserved.</p>
         </div>
@@ -358,8 +377,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
-        speed: 500,
-        loop: false,
+        speed: 14000, // slow, continuous scroll
+        loop: true,
         spaceBetween: 28,
         slidesPerView: 3,
         pagination: { el: '.swiper-pagination', clickable: true },
@@ -368,6 +387,8 @@
         keyboard: { enabled: true, onlyInViewport: true },
         mousewheel: { enabled: true, forceToAxis: true, releaseOnEdges: false, thresholdDelta: 5 },
         nested: true,
+        autoplay: { delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true },
+        loopAdditionalSlides: 5,
         breakpoints: {
           0: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
