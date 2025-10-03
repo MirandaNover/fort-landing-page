@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
       html { scroll-behavior: smooth; }
-      html, body { overflow-x: hidden; overscroll-behavior-x: none; overscroll-behavior-y: auto; }
+      html, body { overflow-x: hidden; overscroll-behavior-x: none; overscroll-behavior-y: none; }
       :root { --safe-top: env(safe-area-inset-top, 0px); }
       .safe-top { padding-top: var(--safe-top); }
       /* Site background */
@@ -57,7 +57,7 @@
 
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 safe-top">
-        <nav class="bg-black/70 backdrop-blur-md rounded-xl px-6 py-3 flex items-center justify-between w-full max-w-4xl ring-1 ring-white/10 shadow-lg shadow-black/20">
+        <nav class="bg-black/70 backdrop-blur-md rounded-xl px-6 py-3 flex items-center justify-between w-full max-w-4xl ring-1 ring-white/10 shadow-lg shadow-black/20 transform-gpu will-change-transform">
             <div class="flex items-center">
                 <img src="images/fort-f-logo.svg" alt="Fort F Logo" class="h-6 brightness-0 invert" />
             </div>
