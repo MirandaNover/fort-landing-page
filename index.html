@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
       html { scroll-behavior: smooth; }
-      html, body { overflow-x: hidden; overscroll-behavior-x: none; overscroll-behavior-y: none; }
+      html, body { overflow-x: hidden; overscroll-behavior-x: none; overscroll-behavior-y: auto; }
       :root { --safe-top: env(safe-area-inset-top, 0px); }
       .safe-top { padding-top: var(--safe-top); }
       /* Site background */
@@ -39,8 +39,6 @@
       .swiper .swiper-pagination { position: static !important; margin-top: 1rem; display: flex; justify-content: center; gap: 8px; }
       .swiper-wrapper { align-items: stretch; }
       .swiper-slide { display: flex; }
-      /* Make autoplay motion continuous (linear) */
-      .swiper .swiper-wrapper { transition-timing-function: linear !important; }
 
       /* Hide Mailchimp default response messages */
       #mce-success-response, #mce-error-response { display: none !important; }
@@ -57,7 +55,7 @@
 
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 safe-top">
-        <nav class="bg-black/70 backdrop-blur-md rounded-xl px-6 py-3 flex items-center justify-between w-full max-w-4xl ring-1 ring-white/10 shadow-lg shadow-black/20 transform-gpu will-change-transform">
+        <nav class="bg-black/70 backdrop-blur-md rounded-xl px-6 py-3 flex items-center justify-between w-full max-w-4xl ring-1 ring-white/10 shadow-lg shadow-black/20">
             <div class="flex items-center">
                 <img src="images/fort-f-logo.svg" alt="Fort F Logo" class="h-6 brightness-0 invert" />
             </div>
@@ -356,7 +354,7 @@
                 </div>
                 <div class="w-1/2 pl-8">
                     <h2 class="text-3xl font-bold mb-4 text-white">About Us</h2>
-                    <p class="text-gray-200">We started Fort out of a frustration that strength training, one of the most important tools for longevity, is underserved by other wearables. We’re both ex-Tesla engineers, and build alongside clinicians, physical‑therapy patients, everyday lifters, and longevity communities. We’re backed by leading venture firms, angel investors, and Carnegie Mellon University.</p>
+                    <p class="text-gray-200">We started Fort out of a frustration that strength training, one of the most important tools for longevity, is underserved by other wearables. We’re both engineers, and build alongside clinicians, physical‑therapy patients, everyday lifters, and longevity communities. We’re backed by leading venture firms, angel investors, and Carnegie Mellon University.</p>
                 </div>
             </div>
         </div>
@@ -377,8 +375,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
-        speed: 14000, // slow, continuous scroll
-        loop: true,
+        speed: 500,
+        loop: false,
         spaceBetween: 28,
         slidesPerView: 3,
         pagination: { el: '.swiper-pagination', clickable: true },
@@ -387,8 +385,6 @@
         keyboard: { enabled: true, onlyInViewport: true },
         mousewheel: { enabled: true, forceToAxis: true, releaseOnEdges: false, thresholdDelta: 5 },
         nested: true,
-        autoplay: { delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true },
-        loopAdditionalSlides: 5,
         breakpoints: {
           0: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
