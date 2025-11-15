@@ -1,471 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fort - Strength Training Wearable</title>
-    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
-    <link rel="mask-icon" href="images/icon.svg" color="#000000">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fort – Strength Training Wearable</title>
 
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Fort – Strength Training Wearable" />
-    <meta property="og:description" content="Tools for the future of human health." />
-    <meta property="og:url" content="https://fort.cx/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://fort.cx/social_preview.png" />
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fort – Strength Training Wearable" />
-    <meta name="twitter:description" content="Tools for the future of human health." />
-    <meta name="twitter:image" content="https://fort.cx/social_preview.png" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-      html { scroll-behavior: smooth; }
-      html, body { overflow-x: hidden; overscroll-behavior-x: none; overscroll-behavior-y: auto; }
-      :root { --safe-top: env(safe-area-inset-top, 0px); }
-      .safe-top { padding-top: var(--safe-top); }
-      /* Site background */
-      body {
-        background-image:
-          linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%),
-          linear-gradient(to bottom, #ffffff 0%, #F3EFEA 10%, #F3EFEA 100%);
-        background-size: 100% 100%, 100% 100%;
-        background-repeat: no-repeat, no-repeat;
-        background-position: center top, center top;
-        background-color: #F3EFEA;
-        -webkit-overflow-scrolling: touch;
-      }
-      /* Smooth white section fade top & bottom */
-      .fade-white {
-        background:
-          linear-gradient(to bottom, #F3EFEA 0%, #ffffff 60%) top/100% 60px no-repeat,
-          linear-gradient(to top, #F3EFEA 0%, #ffffff 60%) bottom/100% 60px no-repeat,
-          #ffffff;
-      }
-      /* Swiper polish */
-      .swiper { overflow: hidden; overscroll-behavior: contain; touch-action: pan-x; }
-      .swiper-pagination-bullet { background: #FDBA74; opacity: .5; }
-      .swiper-pagination-bullet-active { background: #F97316; opacity: 1; }
-      /* Ensure pagination is positioned below the cards */
-      .swiper .swiper-pagination { position: static !important; margin-top: 1rem; display: flex; justify-content: center; gap: 8px; }
-      .swiper-wrapper { align-items: stretch; }
-      .swiper-slide { display: flex; }
-
-      /* Hide Mailchimp default response messages */
-      #mce-success-response, #mce-error-response { display: none !important; }
-
-      /* Mailchimp button and input styles */
-      #mc_embed_signup .button { background-color: #F97316 !important; border: none !important; height: 3.5rem !important; }
-      #mc_embed_signup .button:hover { background-color: #EA580C !important; }
-      #mc_embed_signup input.email { height: 3.5rem !important; }
-
-      .feature-card { height: auto !important; }
-    </style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fort – Strength Training Wearable" />
+  <meta property="og:description" content="Tools for the future of human health." />
+  <meta property="og:image" content="https://fort.cx/social_preview.png" />
 </head>
-<body class="bg-white text-gray-800 overflow-x-hidden">
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 safe-top">
-        <nav class="bg-black/70 backdrop-blur-md rounded-xl px-6 py-3 flex items-center justify-between w-full max-w-4xl ring-1 ring-white/10 shadow-lg shadow-black/20">
-            <div class="flex items-center">
-                <img src="images/fort-f-logo.svg" alt="Fort F Logo" class="h-6 brightness-0 invert" />
-            </div>
-            <div class="flex items-center gap-4">
-              <a href="#benefits" class="text-white/90 hover:text-white transition-colors">Learn More</a>
-              <a href="#waitlist" class="bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors">Join Waitlist</a>
-            </div>
-        </nav>
-    </header>
+<body class="bg-[#F2F2F2] text-gray-800">
+  <div class="top-logo">
+    <img src="images/fort-spellout-logo.svg" alt="Fort wordmark" />
+  </div>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-[85vh] md:min-h-[90vh] lg:min-h-screen flex flex-col justify-start pt-32 bg-transparent">
-      <div class="container mx-auto px-6">
-        <div class="mb-6 md:mb-10 lg:mb-12 text-center">
-          <img
-            src="images/fort-spellout-logo.svg"
-            alt="Fort - Strength Training Wearable"
-            class="h-11 md:h-14 w-auto invert inline-block"
-          />
+  <!-- Hero -->
+  <section
+    class="hero relative min-h-screen flex flex-col justify-start items-center overflow-hidden pt-16 md:pt-24">
+    <div class="hero-media fade-in">
+      <img src="images/website_updated_graphics/device_hero.png" alt="Fort wearable device" class="hero-device" />
+      <img src="images/website_updated_graphics/metric_view_highlighted_section_hero.png" alt="Fort product metrics overview" class="hero-metric" />
+      <img src="images/website_updated_graphics/main_root_view.png" alt="Fort product interface overview" class="hero-main" />
+      <img src="images/website_updated_graphics/exercise_selection.png" alt="Fort exercise selection screen" class="hero-exercise" />
+    </div>
+    <div class="hero-content fade-in">
+      <h1 class="hero-title">The Metrics That Matter</h1>
+      <p class="hero-subtitle">Fort is the first wearable that makes it easy to track strength, cardio, sleep, and stress — all in the one place.</p>
+      <form
+        action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0"
+        method="post" target="_blank" class="hero-form">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required />
+        <button type="submit">Join Waitlist</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Insights -->
+  <section id="insights" class="insights-blank py-8 fade-in">
+    <div class="insights-grid">
+      <div class="insights-card">
+        <div class="insights-copy">
+          <h3 class="insights-title">Workouts Without Guesswork</h3>
         </div>
-        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-          <div class="relative w-full md:w-3/5 flex items-center justify-center md:justify-start">
-            <img
-              src="images/fort-topiso.png"
-              alt="Fort wearable device"
-              class="w-full h-auto md:max-h-[70vh] object-contain scale-[0.935]"
-            />
-          </div>
-          <div class="relative z-10 md:w-2/5 text-center md:text-left md:pl-8">
-            <h1 class="text-[clamp(1.5rem,6vw,4.5rem)] font-normal leading-[1.05] mb-6 md:mb-8 py-2 text-black max-w-[16ch] mx-auto md:mx-0">
-              Intelligent Strength Tracking
-            </h1>
-            <p class="text-[clamp(0.9rem,2.2vw,1.5rem)] font-light mb-8 text-gray-600 max-w-xl mx-auto md:mx-0">
-              Fort measures muscle activity, movement, and recovery in real time to show how your body performs and adapts with every lift.
-            </p>
-            <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-start">
-              <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form-hero" name="mc-embedded-subscribe-form-hero" class="validate w-full md:w-auto" target="_blank" novalidate>
-                <div class="w-full flex flex-col sm:flex-row items-stretch gap-2">
-                  <label for="hero-email" class="sr-only">Email address</label>
-                  <input type="email" value="" name="EMAIL" id="hero-email" placeholder="Enter your email" required autocomplete="email" inputmode="email" class="appearance-none flex-1 min-w-0 w-full h-16 sm:h-12 min-h-[64px] sm:min-h-[48px] px-4 py-4 sm:py-3 border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-base leading-none placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500" />
-                  <button type="submit" id="mc-embedded-subscribe-hero" aria-label="Join waitlist" class="h-12 px-6 rounded-lg sm:rounded-r-lg sm:rounded-l-none bg-orange-500 hover:bg-orange-600 text-white font-medium text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 whitespace-nowrap border border-transparent w-full sm:w-auto">Get Early Access</button>
-                </div>
-                <div style="position:absolute;left:-5000px;" aria-hidden="true">
-                  <input type="text" name="b_669f4d4ef22e91de883061574_b3906d91a3" tabindex="-1" value="">
-                </div>
-              </form>
-            </div>
-            <div class="mt-6 md:mt-8 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-xs text-gray-500">
-            </div>
-          </div>
+        <img src="images/website_updated_graphics/back_squats_detail.png" alt="Back squats detail" class="insights-image" />
+        <p class="insights-description">Fort can tell when your form degrades and recommend an optimal program, helping you get stronger, faster.</p>
+      </div>
+      <div class="insights-card">
+        <div class="insights-copy">
+          <h3 class="insights-title">Ditch The Notebook</h3>
+        </div>
+        <img src="images/website_updated_graphics/leg_day_summary.png" alt="Leg day summary" class="insights-image" />
+        <p class="insights-description">Fort automatically identifies your sets, counts your reps, and provides you with insights on your form and fatigue. All you have to do is push start!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="form-factors" class="form-factors">
+    <div class="form-factors-heading">
+      <h2>How to Use Fort</h2>
+    </div>
+    <div class="form-factors-grid">
+      <div class="factor-card" data-order="wrist">
+        <div class="factor-image-wrap">
+          <img src="images/website_updated_graphics/device_on_wrist.png" alt="Fort device worn on wrist" class="factor-image" />
+        </div>
+        <div class="factor-copy">
+          <h4 class="factor-title">Wear on Your Wrist</h4>
+          <p class="factor-description">All-day health and activity tracking in a sleek, compact package.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Insights section will appear below the Features slider -->
-    <section id="insights" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-x-6 items-start">
-          <div class="lg:sticky lg:top-24">
-            <img src="images/device-phone.png" loading="lazy" alt="Fort app on phone showing training overview" class="rounded-xl w-full h-auto" />
-          </div>
-          <div class="space-y-6">
-            <div>
-              <h2 class="text-2xl md:text-3xl font-normal">Progress you can feel, without the guesswork</h2>
-              <p class="text-gray-600 mt-2">Your training at a glance, so you know how you moved, how you’re improving, and when to push or recover.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-              <!-- Quality card with icon -->
-              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 md:p-6 flex items-center gap-4 shadow-sm">
-                <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
-                  <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/quality-icon.svg') no-repeat center / contain; mask: url('images/icons/quality-icon.svg') no-repeat center / contain;"></span>
-                </div>
-                <div>
-                  <div class="text-base md:text-lg font-medium text-gray-900 mb-1">Quality</div>
-                  <p class="text-gray-800 leading-relaxed">We track your form (tempo, range of motion, muscle activation), consistency, and balance across muscle groups to give you a clear picture of workout quality, not just effort.</p>
-                </div>
-              </div>
-
-              <!-- Progress card with icon -->
-              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 md:p-6 flex items-center gap-4 shadow-sm">
-                <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
-                  <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/progress-icon.svg') no-repeat center / contain; mask: url('images/icons/progress-icon.svg') no-repeat center / contain;"></span>
-                </div>
-                <div>
-                  <div class="text-base md:text-lg font-medium text-gray-900 mb-1">Progress</div>
-                  <p class="text-gray-800 leading-relaxed">Real progress goes beyond numbers on a barbell. See how your strength, efficiency, and movement patterns improve over time, with lower strain for the same output.</p>
-                </div>
-              </div>
-
-              <!-- Readiness card with icon -->
-              <div class="rounded-2xl bg-white ring-1 ring-black/5 p-5 md:p-6 flex items-center gap-4 shadow-sm">
-                <div class="w-12 h-12 bg-orange-50 rounded-md grid place-items-center shrink-0">
-                  <span class="block w-6 h-6 bg-orange-600" style="-webkit-mask: url('images/icons/readiness-icon.svg') no-repeat center / contain; mask: url('images/icons/readiness-icon.svg') no-repeat center / contain;"></span>
-                </div>
-                <div>
-                  <div class="text-base md:text-lg font-medium text-gray-900 mb-1">Readiness</div>
-                  <p class="text-gray-800 leading-relaxed">Recovery is vital. By factoring in training intensity, fatigue, and sleep data, we’ll tell you when different muscle groups are primed to train again.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="factor-card factor-card-evan" data-order="evan">
+        <div class="factor-image-wrap">
+          <img src="images/website_updated_graphics/evan.png" alt="Fort wearable on athlete" class="factor-image" />
+        </div>
+        <div class="factor-copy">
+          <h4 class="factor-title">Wear Directly on Any Muscle</h4>
+          <p class="factor-description">Our sensors measure muscle activation and fatigue, so you know you&rsquo;re training for optimal gains.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Features Section (slider) - moved below Insights -->
-    <section id="benefits" class="pt-6 md:pt-8 pb-16 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="relative">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide px-4 group">
-                <div class="h-full">
-                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Build Muscle and Strength</h3>
-                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Strength training is a vital part of a healthy lifestyle. Fort is purpose-built to help you get the most out of every workout.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide px-4 group">
-                <div class="h-full">
-                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Stop manual logging</h3>
-                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort auto‑detects sets, reps, and range of motion, so you can focus on lifting.<br></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide px-4 group">
-                <div class="h-full">
-                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Train with better form</h3>
-                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Real‑time feedback on depth, tempo, and control based on sensor data, not guesses.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide px-4 group">
-                <div class="h-full">
-                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Optimize Your Workout Plan</h3>
-                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">Fort uses sensor data and AI to tell you which exercises work best for your unique body and goals, and when to push harder or back off.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide px-4 group">
-                <div class="h-full">
-                  <div class="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl feature-card">
-                    <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
-                    <div class="flex h-full flex-col p-5 md:p-6 gap-2">
-                      <h3 class="text-xl md:text-2xl font-medium tracking-tight text-black">Celebrate Progress</h3>
-                      <p class="text-[15px] md:text-base leading-relaxed text-gray-600">We help you see how far you’ve come and plan for the future with intelligent insights on how to gradually increase the challenge of your workouts.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-          <!-- Edge fades on white background -->
-          <div class="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-12 bg-gradient-to-r from-white to-transparent z-10"></div>
-          <div class="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-12 bg-gradient-to-l from-white to-transparent z-10"></div>
+      <div class="factor-card" data-order="magnet">
+        <div class="factor-image-wrap">
+          <img src="images/website_updated_graphics/device_on_barbell.png" alt="Fort device on barbell" class="factor-image" />
+        </div>
+        <div class="factor-copy">
+          <h4 class="factor-title">Magnet Attachment for Training</h4>
+          <p class="factor-description">Understand your form without any extra straps.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" aria-labelledby="how-works-heading" class="py-20">
-      <div class="container mx-auto px-6">
-        <header class="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
-          <h2 id="how-works-heading" class="text-2xl md:text-3xl font-normal">How Fort Works</h2>
-          <p class="text-gray-600 mt-2">Fort turns five signals—temperature, heart rate, motion, muscle activation, and oxygenation—into metrics that support wellness, reduce friction, and show real progress every session.</p>
-        </header>
-        
-        <ol role="list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
-            <h3 class="text-lg md:text-xl font-medium font-sans mb-2 flex items-center gap-2">
-              <span class="text-orange-600">1</span>
-              <span class="text-black">Sense</span>
-            </h3>
-            <p class="text-gray-700">We measure how hard your muscles are working, how much oxygen they have, and how you move, like depth and speed.</p>
-          </li>
-          <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
-            <h3 class="text-lg md:text-xl font-medium font-sans mb-2 flex items-center gap-2">
-              <span class="text-orange-600">2</span>
-              <span class="text-black">Understand</span>
-            </h3>
-            <p class="text-gray-700">Signals become rep velocity, range of motion, fatigue, and form consistency. You see what changed and why.</p>
-          </li>
-          <li class="rounded-xl bg-white/80 backdrop-blur border border-white/50 ring-1 ring-black/5 p-6">
-            <h3 class="text-lg md:text-xl font-medium font-sans mb-2 flex items-center gap-2">
-              <span class="text-orange-600">3</span>
-              <span class="text-black">Act</span>
-            </h3>
-            <p class="text-gray-700">Real-time insights, daily feedback, weekly trends, and monthly learnings fuel progress. Fort helps you choose load, volume, and technique with confidence.</p>
-          </li>
-        </ol>
+  <section class="community-banner">
+    <div class="community-content">
+      <h2 class="community-title">coming soon</h2>
+      <p class="community-description">We&rsquo;ll drop some surprises before release, so join our waitlist.</p>
+      <form
+        action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0"
+        method="post"
+        target="_blank"
+        class="community-form">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required />
+        <button type="submit">Join Waitlist</button>
+      </form>
+    </div>
+    <div class="community-media">
+      <img src="images/website_updated_graphics/group_aesthetic_pics.png" alt="Fort community training together" />
+    </div>
+  </section>
 
-        <figure class="w-full mt-10 md:mt-12 mb-0">
-          <img src="images/system-overview-new.png" alt="Diagram of the Fort wearable reading muscle activation with sEMG, oxygenation with NIRS, and movement with an IMU. Signals become depth, velocity, fatigue, and coaching cues." class="w-full rounded-lg shadow-lg" />
-          <figcaption class="sr-only">System overview showing sensors and the coaching outputs they create.</figcaption>
-        </figure>
-    </section>
+  <!-- Footer -->
+  <footer class="py-12 bg-[#3E3E3E] text-white text-center">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="https://www.linkedin.com/company/fortfit" class="hover:text-orange-500">LinkedIn</a>
+      <a href="mailto:miranda@fort.cx" class="hover:text-orange-500">Contact</a>
+    </div>
+    <p>&copy; 2025 Fort. All rights reserved.</p>
+  </footer>
 
-    <!-- Mailing List Signup -->
-    <section id="waitlist" class="py-20 bg-transparent">
-        <div class="container mx-auto px-4">
-          <div class="mx-auto max-w-2xl relative overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 p-8 md:p-10 lg:p-12">
-
-            <header class="text-center">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 text-orange-700 text-xs font-medium ring-1 ring-orange-200 mb-3">Early access</span>
-              <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-black">Be the first to train with Fort</h2>
-            </header>
-
-            <div id="mc_embed_signup" class="mx-auto mt-6 md:mt-8 max-w-xl">
-              <form action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                  <div class="w-full flex flex-col sm:flex-row gap-3 items-stretch">
-                    <label for="mce-EMAIL" class="sr-only">Email address</label>
-                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Enter your email" required autocomplete="email" inputmode="email" class="email appearance-none flex-1 min-w-0 w-full h-16 sm:h-14 min-h-[64px] sm:min-h-[56px] px-4 sm:px-5 py-4 sm:py-3 border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-lg leading-none placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500" />
-                    <button type="submit" id="mc-embedded-subscribe" aria-label="Join waitlist" class="button h-14 px-7 rounded-lg sm:rounded-r-lg sm:rounded-l-none bg-orange-500 hover:bg-orange-600 text-white font-medium text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 w-auto sm:w-auto self-center sm:self-auto">Join Waitlist</button>
-                  </div>
-                  <div class="text-xs text-gray-500 mt-2 text-center sm:text-left">We’ll only email you about Fort. Unsubscribe anytime.</div>
-                  <span id="mce-responses" class="flex items-center gap-2 mt-3">
-                    <span class="response text-red-600 text-sm" id="mce-error-response" style="display:none"></span>
-                    <span class="response text-green-700 text-sm" id="mce-success-response" style="display:none"></span>
-                  </span>
-                  <div style="position:absolute;left:-5000px;" aria-hidden="true">
-                    <input type="text" name="b_669f4d4ef22e91de883061574_b3906d91a3" tabindex="-1" value="">
-                  </div>
-                </div>
-              </form>
-
-              <!-- Custom inline success state -->
-              <div id="mc-custom-success" class="hidden mt-6 rounded-lg bg-white/90 ring-1 ring-black/5 p-6">
-                <h3 class="text-xl font-medium mb-2">You’re on the list!</h3>
-                <p class="text-gray-600">Thanks for signing up. We’ll email you as soon as early access opens.</p>
-              </div>
-            </div>
-
-            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-          </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section class="py-20 bg-black/90 backdrop-blur-md text-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col-reverse md:flex-row items-center justify-center">
-                <div class="w-full md:w-1/2 mt-8 md:mt-0">
-                    <div class="flex items-start justify-center gap-10 sm:gap-14 md:gap-16">
-                      <figure class="flex flex-col items-start text-left">
-                        <img src="images/me-headshot.jpeg" alt="Miranda headshot" loading="lazy" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover shadow-lg" />
-                        <figcaption class="mt-3 w-24 sm:w-28 md:w-32">
-                          <div class="text-sm sm:text-base font-medium text-white">Miranda Nover</div>
-                          <div class="mt-0.5 flex items-center justify-between">
-                            <div class="text-xs sm:text-sm text-gray-300">CEO</div>
-                            <a href="https://www.linkedin.com/in/mirandanover" aria-label="LinkedIn profile" class="text-gray-300 hover:text-white transition-colors">
-                              <svg viewBox="0 0 16 16" fill="currentColor" width="1em" height="1em" aria-hidden="true" focusable="false">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6H2.542v7.5h2.401zm-1.2-8.575c.837 0 1.356-.554 1.356-1.248-.015-.709-.519-1.248-1.342-1.248-.823 0-1.356.539-1.356 1.248 0 .694.519 1.248 1.327 1.248h.015zM13.5 13.5V9.359c0-2.209-1.18-3.238-2.751-3.238-1.27 0-1.845.7-2.165 1.193V6H6.182c.03.679 0 7.5 0 7.5h2.402v-4.19c0-.224.016-.447.082-.607.18-.447.59-.912 1.277-.912.902 0 1.264.689 1.264 1.701V13.5H13.5z"></path>
-                              </svg>
-                            </a>
-                          </div>
-                        </figcaption>
-                      </figure>
-                      <figure class="flex flex-col items-start text-left">
-                        <img src="images/paul-headshot.jpeg" alt="Paul headshot" loading="lazy" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover shadow-lg" />
-                        <figcaption class="mt-3 w-24 sm:w-28 md:w-32">
-                          <div class="text-sm sm:text-base font-medium text-white">Paul Schneider</div>
-                          <div class="mt-0.5 flex items-center justify-between">
-                            <div class="text-xs sm:text-sm text-gray-300">CTO</div>
-                            <a href="https://www.linkedin.com/in/paulcschneider" aria-label="LinkedIn profile" class="text-gray-300 hover:text-white transition-colors">
-                              <svg viewBox="0 0 16 16" fill="currentColor" width="1em" height="1em" aria-hidden="true" focusable="false">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6H2.542v7.5h2.401zm-1.2-8.575c.837 0 1.356-.554 1.356-1.248-.015-.709-.519-1.248-1.342-1.248-.823 0-1.356.539-1.356 1.248 0 .694.519 1.248 1.327 1.248h.015zM13.5 13.5V9.359c0-2.209-1.18-3.238-2.751-3.238-1.27 0-1.845.7-2.165 1.193V6H6.182c.03.679 0 7.5 0 7.5h2.402v-4.19c0-.224.016-.447.082-.607.18-.447.59-.912 1.277-.912.902 0 1.264.689 1.264 1.701V13.5H13.5z"></path>
-                              </svg>
-                            </a>
-                          </div>
-                        </figcaption>
-                      </figure>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 md:pl-8">
-                    <h2 class="text-3xl font-bold mb-4 text-white">About Us</h2>
-                    <p class="text-gray-200">We started Fort out of a frustration that strength training, one of the most important tools for longevity, is underserved by other wearables. We’re both engineers, and build alongside clinicians, physical‑therapy patients, everyday lifters, and longevity communities. We’re backed by leading venture firms, angel investors, and Carnegie Mellon University.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-white py-12 bg-black/90 backdrop-blur-md">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.linkedin.com/company/fortfit" class="hover:text-orange-500">LinkedIn</a>
-                <a href="mailto:miranda@fort.cx" class="hover:text-orange-500">Contact</a>
-            </div>
-            <p>&copy; 2025 Fort. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Swiper JS + init -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper('.swiper', {
-        speed: 500,
-        loop: false,
-        spaceBetween: 28,
-        slidesPerView: 3,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        allowTouchMove: true,
-        grabCursor: true,
-        keyboard: { enabled: true, onlyInViewport: true },
-        mousewheel: { enabled: true, forceToAxis: true, releaseOnEdges: false, thresholdDelta: 5 },
-        nested: true,
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        },
-      });
-
-      const equalizeFeatureCardsMin = () => {
-        const cards = Array.from(document.querySelectorAll('.feature-card'));
-        if (!cards.length) return;
-        // reset, measure, set min-height
-        cards.forEach(c => c.style.minHeight = '');
-        const max = cards.reduce((m, c) => Math.max(m, c.offsetHeight), 0);
-        cards.forEach(c => c.style.minHeight = max + 'px');
-      };
-      equalizeFeatureCardsMin();
-      window.addEventListener('resize', () => {
-        clearTimeout(window.__cardEqMinT);
-        window.__cardEqMinT = setTimeout(equalizeFeatureCardsMin, 150);
-      });
-      if (swiper && swiper.on) {
-        swiper.on('resize', equalizeFeatureCardsMin);
-        swiper.on('slideChange', equalizeFeatureCardsMin);
-        swiper.on('update', equalizeFeatureCardsMin);
-      }
-
-      // Equal-height script removed to let cards size to content
-      // (kept swiper init above)
-    </script>
-    <script>
-      (() => {
-      const successEl = document.getElementById('mce-success-response');
-      const errorEl = document.getElementById('mce-error-response');
-      const custom = document.getElementById('mc-custom-success');
-      const form = document.getElementById('mc-embedded-subscribe-form');
-      if (!custom) return;
-      custom.setAttribute('role','status');
-      custom.setAttribute('aria-live','polite');
-
-      const showCustom = (title, message) => {
-        const h3 = custom.querySelector('h3');
-        const p = custom.querySelector('p');
-        if (h3) h3.textContent = title;
-        if (p) p.textContent = message;
-        custom.classList.remove('hidden');
-        if (form) form.classList.add('opacity-60', 'pointer-events-none');
-      };
-
-      const handler = () => {
-        if (successEl && successEl.textContent.trim().length > 0) {
-          const raw = successEl.textContent.trim();
-          const lower = raw.toLowerCase();
-          if (lower.includes('already subscribed')) {
-            showCustom("You're already on the list", 'You are all set. We will keep you posted when early access opens.');
-          } else {
-            showCustom("You're on the list!", 'Thanks for signing up. We will email you as soon as early access opens.');
-          }
-        } else if (errorEl && errorEl.textContent.trim().length > 0) {
-          showCustom('Please check your email', errorEl.textContent.trim());
-        }
-      };
-
-      const obsTargets = [successEl, errorEl].filter(Boolean);
-      obsTargets.forEach(el => new MutationObserver(handler).observe(el, { attributes: true, childList: true, subtree: true }));
-    })();
-    </script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
