@@ -107,6 +107,21 @@ body {
   margin: clamp(0.4rem, 1.4vw, 0.9rem) auto 0;
 }
 
+.form-success-message {
+  margin-top: 0.6rem;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  color: #0f172a;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.form-success-message.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-form input,
 .community-form input {
   border-radius: 9999px;
