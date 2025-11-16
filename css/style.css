@@ -1,6 +1,6 @@
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-family: 'Archivo', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   color: #111;
 }
 
@@ -81,7 +81,7 @@ body {
 
 .hero-content {
   text-align: center;
-  margin-top: clamp(0.3rem, 2vw, 1.1rem);
+  margin-top: clamp(-0.2rem, 1vw, 0.6rem);
   padding-inline: clamp(1.5rem, 6vw, 4rem);
   color: #fff;
 }
@@ -389,7 +389,7 @@ body {
   }
 
   .hero-content {
-    margin-top: clamp(1.4rem, 11vw, 2.8rem);
+    margin-top: clamp(0.8rem, 8vw, 2rem);
   }
 
   .hero-subtitle {
