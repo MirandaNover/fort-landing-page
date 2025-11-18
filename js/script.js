@@ -11,30 +11,6 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-// Logo color shift on scroll
-(function () {
-  const root = document.documentElement;
-  const hero = document.querySelector('.hero');
-  const insights = document.querySelector('#insights');
-  const logo = document.querySelector('.top-logo img');
-
-  if (!hero || !insights || !logo) return;
-
-  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-
-  const updateLogo = () => {
-    const start = hero.offsetTop;
-    const end = insights.offsetTop;
-    const range = Math.max(end - start, 1);
-    const progress = clamp((window.scrollY - start) / range, 0, 1);
-    root.style.setProperty('--logo-invert', progress.toFixed(3));
-  };
-
-  updateLogo();
-  window.addEventListener('scroll', updateLogo, { passive: true });
-  window.addEventListener('resize', updateLogo);
-})();
-
 // Mailchimp inline submit
 (function () {
   const forms = document.querySelectorAll('.mailchimp-form');
