@@ -24,12 +24,7 @@ body {
   transition: filter 0.15s linear, opacity 0.15s linear;
 }
 
-.hero {
-  background-image: url('/images/website_updated_graphics/hero_backround.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 
 .hero-media {
   position: relative;
@@ -50,6 +45,10 @@ body {
 .hero-exercise {
   position: relative;
   grid-area: 1 / 1;
+}
+
+.hero {
+  background-color: #fff;
 }
 
 .hero-device {
@@ -83,7 +82,7 @@ body {
   text-align: center;
   margin-top: clamp(-0.2rem, 1vw, 0.6rem);
   padding-inline: clamp(1.5rem, 6vw, 4rem);
-  color: #fff;
+  color: #0f172a;
 }
 
 .hero-title {
@@ -96,7 +95,7 @@ body {
   font-size: clamp(1.1rem, 2.4vw, 1.5rem);
   max-width: 720px;
   margin: 0 auto clamp(0.1rem, 0.5vw, 0.3rem);
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(15, 23, 42, 0.78);
 }
 
 .hero-form {

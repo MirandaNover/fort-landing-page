@@ -27,7 +27,7 @@ const swiper = new Swiper('.swiper', {
     const end = insights.offsetTop;
     const range = Math.max(end - start, 1);
     const progress = clamp((window.scrollY - start) / range, 0, 1);
-    root.style.setProperty('--logo-invert', progress.toFixed(3));
+    root.style.setProperty('--logo-invert', (1 - progress).toFixed(3));
   };
 
   updateLogo();
