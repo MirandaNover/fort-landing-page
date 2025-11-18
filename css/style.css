@@ -238,7 +238,7 @@ body {
 
 .form-factors-heading h2 {
   font-size: clamp(1.8rem, 4.6vw, 3.2rem);
-  font-weight: 600;
+  font-weight: 500;
   color: #0f172a;
   letter-spacing: 0.02em;
 }
