@@ -433,7 +433,7 @@ body {
 
   .form-factors-grid {
     grid-template-columns: 1fr;
-    gap: clamp(0.6rem, 4.8vw, 1.2rem);
+    gap: clamp(0.24rem, 1.9vw, 0.48rem);
     justify-items: center;
     align-items: center;
     width: min(520px, 90vw);
@@ -459,27 +459,19 @@ body {
   }
 
   .factor-image-wrap {
-    height: clamp(360px, 108vw, 480px);
+    height: clamp(432px, 130vw, 576px);
   }
 
   .factor-card-evan .factor-image-wrap {
-    height: clamp(360px, 108vw, 480px);
+    height: clamp(432px, 130vw, 576px);
   }
 
   .factor-image {
-    height: clamp(330px, 94vw, 420px);
-  }
-
-  .factor-copy {
-    height: clamp(330px, 94vw, 420px);
-  }
-
-  .factor-description {
-    max-height: clamp(300px, 90vw, 400px);
+    max-height: clamp(396px, 114vw, 504px);
   }
 
   .factor-card-evan .factor-image {
-    max-height: clamp(300px, 90vw, 400px);
+    max-height: clamp(396px, 114vw, 504px);
   }
 
   .factor-card-evan .factor-copy {

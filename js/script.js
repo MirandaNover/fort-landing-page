@@ -30,7 +30,8 @@ const swiper = new Swiper('.swiper', {
     const heroTop = hero.offsetTop;
     const heroHeight = hero.offsetHeight || 1;
     const progress = clamp((window.scrollY - heroTop) / heroHeight, 0, 1);
-    const opacity = 1 - progress;
+    const fadeProgress = clamp(progress * 2, 0, 1);
+    const opacity = 1 - fadeProgress;
     logo.style.opacity = opacity.toFixed(3);
   };
 
