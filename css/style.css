@@ -33,27 +33,19 @@ body {
   height: auto;
 }
 
-.hero-device,
+    height: clamp(432px, 130vw, 576px);
 .hero-metric,
 .hero-main,
 .hero-exercise {
-  position: relative;
+    height: clamp(432px, 130vw, 576px);
   grid-area: 1 / 1;
 }
 
-.hero {
-  background-color: #fff;
-}
-
-.hero-device {
-  width: clamp(90px, 13vw, 160px);
-  transform: translateX(-105%);
-  z-index: 3;
-}
+    max-height: clamp(396px, 118vw, 504px);
 
 .hero-metric {
   width: clamp(156px, 23.4vw, 292px);
-  max-width: 292px;
+    max-height: clamp(396px, 118vw, 504px);
   transform: translateX(0%);
   z-index: 4;
 }
@@ -242,7 +234,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.5rem, 5.5vw, 2.8rem);
+  gap: clamp(1.1rem, 4.2vw, 2.2rem);
   align-items: start;
 }
 
@@ -252,7 +244,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  gap: clamp(0.65rem, 2vw, 1.2rem);
+  gap: clamp(0.45rem, 1.6vw, 0.9rem);
 }
 
 .factor-image-wrap {
@@ -363,7 +355,7 @@ body {
 
 @media (max-width: 639px) {
   .hero-media {
-    margin-bottom: clamp(1.8rem, 12vw, 3.6rem);
+    margin-bottom: clamp(1.1rem, 9vw, 2.4rem);
   }
 
   .hero-title {
@@ -373,11 +365,24 @@ body {
   }
 
   .hero-content {
-    margin-top: clamp(0.8rem, 8vw, 2rem);
+    margin-top: clamp(0.4rem, 6vw, 1.25rem);
   }
 
   .hero-subtitle {
     margin: 0 auto clamp(0.95rem, 7vw, 1.5rem);
+  }
+
+  .hero-form {
+    width: min(92vw, 360px);
+    margin: clamp(0.2rem, 4.5vw, 0.75rem) auto 0;
+  }
+
+  .hero-form input {
+    padding: 0.8rem 1.1rem;
+  }
+
+  .hero-form button {
+    padding: 0.85rem 1.3rem;
   }
 
   .top-logo img {
@@ -419,7 +424,7 @@ body {
 
   .form-factors-grid {
     grid-template-columns: 1fr;
-    gap: clamp(1.1rem, 6.5vw, 2rem);
+    gap: clamp(0.6rem, 4.8vw, 1.2rem);
     justify-items: center;
     align-items: center;
     width: min(520px, 90vw);
@@ -453,19 +458,19 @@ body {
   }
 
   .factor-image {
-    height: clamp(420px, 120vw, 540px);
+    height: clamp(330px, 94vw, 420px);
   }
 
   .factor-copy {
-    height: clamp(420px, 120vw, 540px);
+    height: clamp(330px, 94vw, 420px);
   }
 
   .factor-description {
-    max-height: clamp(390px, 110vw, 520px);
+    max-height: clamp(300px, 90vw, 400px);
   }
 
   .factor-card-evan .factor-image {
-    max-height: clamp(390px, 110vw, 520px);
+    max-height: clamp(300px, 90vw, 400px);
   }
 
   .factor-card-evan .factor-copy {
