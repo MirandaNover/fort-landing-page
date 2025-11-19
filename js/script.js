@@ -11,6 +11,39 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+// Logo fade on scroll
+(function () {
+  const hero = document.querySelector('.hero');
+  const logo = document.querySelector('.top-logo img');
+
+  if (!hero || !logo) return;
+
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+  const mobileQuery = window.matchMedia('(max-width: 639px)');
+
+  const updateOpacity = () => {
+    if (!mobileQuery.matches) {
+      logo.style.opacity = '1';
+      return;
+    }
+
+    const heroTop = hero.offsetTop;
+    const heroHeight = hero.offsetHeight || 1;
+    const progress = clamp((window.scrollY - heroTop) / heroHeight, 0, 1);
+    const opacity = 1 - progress;
+    logo.style.opacity = opacity.toFixed(3);
+  };
+
+  updateOpacity();
+  window.addEventListener('scroll', updateOpacity, { passive: true });
+  window.addEventListener('resize', updateOpacity);
+  if (typeof mobileQuery.addEventListener === 'function') {
+    mobileQuery.addEventListener('change', updateOpacity);
+  } else if (typeof mobileQuery.addListener === 'function') {
+    mobileQuery.addListener(updateOpacity);
+  }
+})();
+
 // Mailchimp inline submit
 (function () {
   const forms = document.querySelectorAll('.mailchimp-form');
