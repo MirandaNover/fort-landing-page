@@ -1,50 +1,3 @@
-// Swiper Init
-const swiper = new Swiper('.swiper', {
-  speed: 500,
-  spaceBetween: 28,
-  slidesPerView: 3,
-  pagination: { el: '.swiper-pagination', clickable: true },
-  breakpoints: {
-    0: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  },
-});
-
-// Logo fade on scroll
-(function () {
-  const hero = document.querySelector('.hero');
-  const logo = document.querySelector('.top-logo img');
-
-  if (!hero || !logo) return;
-
-  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-  const mobileQuery = window.matchMedia('(max-width: 639px)');
-
-  const updateOpacity = () => {
-    if (!mobileQuery.matches) {
-      logo.style.opacity = '1';
-      return;
-    }
-
-    const heroTop = hero.offsetTop;
-    const heroHeight = hero.offsetHeight || 1;
-    const progress = clamp((window.scrollY - heroTop) / heroHeight, 0, 1);
-    const fadeProgress = clamp(progress * 2, 0, 1);
-    const opacity = 1 - fadeProgress;
-    logo.style.opacity = opacity.toFixed(3);
-  };
-
-  updateOpacity();
-  window.addEventListener('scroll', updateOpacity, { passive: true });
-  window.addEventListener('resize', updateOpacity);
-  if (typeof mobileQuery.addEventListener === 'function') {
-    mobileQuery.addEventListener('change', updateOpacity);
-  } else if (typeof mobileQuery.addListener === 'function') {
-    mobileQuery.addListener(updateOpacity);
-  }
-})();
-
 // Mailchimp inline submit
 (function () {
   const forms = document.querySelectorAll('.mailchimp-form');
@@ -52,10 +5,29 @@ const swiper = new Swiper('.swiper', {
 
   forms.forEach(form => {
     const submitButton = form.querySelector('button[type="submit"]');
-    const defaultButtonText = submitButton ? submitButton.textContent : '';
-    const messageEl = form.nextElementSibling && form.nextElementSibling.classList.contains('form-success-message')
-      ? form.nextElementSibling
-      : null;
+    const fieldWrapper = form.querySelector('.mailchimp-field');
+    const emailInput = form.querySelector('input[type="email"]');
+    const message = form.querySelector('.mailchimp-message');
+    let messageTimeout;
+    const hideMessage = () => {
+      if (messageTimeout) {
+        clearTimeout(messageTimeout);
+        messageTimeout = null;
+      }
+      if (message) {
+        message.textContent = '';
+        message.classList.remove('is-visible');
+      }
+    };
+    const clearSuccessState = () => {
+      if (fieldWrapper) fieldWrapper.classList.remove('is-success');
+      hideMessage();
+    };
+
+    if (emailInput) {
+      emailInput.addEventListener('input', clearSuccessState);
+      emailInput.addEventListener('focus', clearSuccessState);
+    }
 
     form.addEventListener('submit', event => {
       event.preventDefault();
@@ -64,15 +36,11 @@ const swiper = new Swiper('.swiper', {
       if (!form.reportValidity()) return;
 
       form.dataset.submitting = 'true';
-
-      if (messageEl) {
-        messageEl.classList.remove('is-visible');
-        messageEl.setAttribute('hidden', '');
-      }
+      clearSuccessState();
 
       if (submitButton) {
         submitButton.disabled = true;
-        submitButton.textContent = 'Submitting…';
+        submitButton.classList.add('is-loading');
       }
 
       const formData = new FormData(form);
@@ -81,15 +49,18 @@ const swiper = new Swiper('.swiper', {
         form.reset();
         if (submitButton) {
           submitButton.disabled = false;
-          submitButton.textContent = defaultButtonText;
+          submitButton.classList.remove('is-loading');
         }
-        if (messageEl) {
-          messageEl.removeAttribute('hidden');
-          requestAnimationFrame(() => messageEl.classList.add('is-visible'));
-          setTimeout(() => {
-            messageEl.classList.remove('is-visible');
-            messageEl.setAttribute('hidden', '');
-          }, 6000);
+        if (fieldWrapper) {
+          fieldWrapper.classList.add('is-success');
+          setTimeout(() => fieldWrapper.classList.remove('is-success'), 5000);
+        }
+        if (message) {
+          message.textContent = 'All set! We\'ll be in touch.';
+          message.classList.add('is-visible');
+          messageTimeout = window.setTimeout(() => {
+            hideMessage();
+          }, 6500);
         }
         delete form.dataset.submitting;
       };
