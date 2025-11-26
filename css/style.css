@@ -18,7 +18,8 @@ html {
   background-image: var(--hero-gradient);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
 @font-face {
