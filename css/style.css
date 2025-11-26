@@ -2,9 +2,7 @@
   color-scheme: light;
   --hero-blue: #a3dbff;
   --hero-gradient:
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.45), transparent 55%),
-    radial-gradient(circle at 35% 90%, rgba(255, 255, 255, 0.25), transparent 60%),
-    linear-gradient(0deg, #b8e5ff 0%, #a3dbff 45%, #85c8f4 100%);
+    radial-gradient(circle at 50% 115%, #7dc3ec 0%, #8fd0f3 35%, #a3dbff 65%, #c8ebff 100%);
   --text-primary: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.78);
   --input-bg: rgba(255, 255, 255, 0.83);
