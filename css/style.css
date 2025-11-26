@@ -64,6 +64,7 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  transform: translate3d(0, 0, 0);
 }
 
 main.hero {
