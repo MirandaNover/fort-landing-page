@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --hero-blue: #a3dbff;
+  --hero-blue: #d3ecff;
   --hero-gradient: linear-gradient(180deg, #a3dbff 0%, #b4e0ff 55%, #d3ecff 100%);
   --text-primary: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.78);
@@ -52,6 +52,18 @@ body {
   align-items: center;
   justify-content: center;
   padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--hero-blue);
+  background-image: var(--hero-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
 
 main.hero {
