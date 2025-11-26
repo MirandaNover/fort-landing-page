@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
-  --hero-blue: #d3ecff;
-  --hero-gradient: linear-gradient(180deg, #d3ecff 0%, #e4f3ff 60%, #f6fbff 100%);
+  --hero-blue: #A3DBFF;
+  --hero-gradient: linear-gradient(180deg, #A3DBFF 0%, #b7e4ff 60%, #d3ecff 100%);
   --text-primary: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.78);
   --input-bg: rgba(255, 255, 255, 0.83);
@@ -14,6 +14,7 @@
 
 html {
   min-height: 100%;
+  overflow: hidden;
   background-color: var(--hero-blue);
   background-image: var(--hero-gradient);
   background-repeat: no-repeat;
@@ -45,6 +46,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow: hidden;
   font-family: 'PP Formula', 'PP Pangram Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: transparent;
   color: var(--text-primary);
