@@ -10,6 +10,8 @@
   --accent: rgba(255, 255, 255, 0.94);
   --accent-hover: #ffffff;
   --success: #ffffff;
+  --text-success: rgba(13, 52, 94, 0.75);
+  --text-error: #ffe1e7;
 }
 
 html {
@@ -205,7 +207,7 @@ main.hero {
   min-height: 1.25rem;
   margin: 0.4rem 0 0;
   font-size: 0.92rem;
-  color: rgba(13, 52, 94, 0.75);
+  color: var(--text-success);
   letter-spacing: 0.01em;
   opacity: 0;
   transition: opacity 0.25s ease;
@@ -213,6 +215,10 @@ main.hero {
 
 .mailchimp-message.is-visible {
   opacity: 1;
+}
+
+.mailchimp-message.is-error {
+  color: var(--text-error);
 }
 
 .sr-only {

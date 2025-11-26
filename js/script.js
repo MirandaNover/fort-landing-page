@@ -16,12 +16,31 @@
       }
       if (message) {
         message.textContent = '';
-        message.classList.remove('is-visible');
+        message.classList.remove('is-visible', 'is-error');
       }
+    };
+    const showMessage = (text, variant = 'success') => {
+      if (!message) return;
+      hideMessage();
+      message.textContent = text;
+      if (variant === 'error') {
+        message.classList.add('is-error');
+      }
+      message.classList.add('is-visible');
+      messageTimeout = window.setTimeout(() => {
+        hideMessage();
+      }, 6500);
     };
     const clearSuccessState = () => {
       if (fieldWrapper) fieldWrapper.classList.remove('is-success');
       hideMessage();
+    };
+    const resetSubmissionState = () => {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.classList.remove('is-loading');
+      }
+      delete form.dataset.submitting;
     };
 
     if (emailInput) {
@@ -47,22 +66,17 @@
 
       const showSuccess = () => {
         form.reset();
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.classList.remove('is-loading');
-        }
         if (fieldWrapper) {
           fieldWrapper.classList.add('is-success');
           setTimeout(() => fieldWrapper.classList.remove('is-success'), 5000);
         }
-        if (message) {
-          message.textContent = 'All set! We\'ll be in touch.';
-          message.classList.add('is-visible');
-          messageTimeout = window.setTimeout(() => {
-            hideMessage();
-          }, 6500);
-        }
-        delete form.dataset.submitting;
+        showMessage("All set! We'll be in touch.");
+        resetSubmissionState();
+      };
+
+      const showError = () => {
+        showMessage('Something went wrong. Please try again.', 'error');
+        resetSubmissionState();
       };
 
       fetch(form.action, {
@@ -70,8 +84,8 @@
         mode: 'no-cors',
         body: formData,
       })
-        .catch(() => {})
-        .finally(showSuccess);
+        .then(showSuccess)
+        .catch(showError);
     });
   });
 })();
