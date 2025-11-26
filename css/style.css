@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
-  --hero-blue: #A3DBFF;
-  --hero-gradient: linear-gradient(180deg, #A3DBFF 0%, #b0e2ff 60%, #c8e9ff 100%);
+  --hero-blue: #61B4FD;
+  --hero-background: url('../images/image.png');
   --text-primary: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.78);
   --input-bg: rgba(255, 255, 255, 0.83);
@@ -18,10 +18,10 @@ html {
   min-height: 100%;
   overflow: hidden;
   background-color: var(--hero-blue);
-  background-image: var(--hero-gradient);
+  background-image: var(--hero-background);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -64,10 +64,10 @@ body::before {
   inset: 0;
   z-index: -1;
   background-color: var(--hero-blue);
-  background-image: var(--hero-gradient);
+  background-image: var(--hero-background);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   transform: translate3d(0, 0, 0);
 }
 
