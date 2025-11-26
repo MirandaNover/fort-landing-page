@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --hero-blue: #A3DBFF;
-  --hero-gradient: linear-gradient(180deg, #A3DBFF 0%, #b7e4ff 60%, #d3ecff 100%);
+  --hero-gradient: linear-gradient(180deg, #A3DBFF 0%, #b0e2ff 60%, #c8e9ff 100%);
   --text-primary: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.78);
   --input-bg: rgba(255, 255, 255, 0.83);
