@@ -1,225 +1,172 @@
-:root {
-  color-scheme: light;
-  --hero-blue: #61B4FD;
-  --hero-background: url('../images/image.png');
-  --text-primary: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.78);
-  --input-bg: rgba(255, 255, 255, 0.83);
-  --input-border: rgba(13, 52, 94, 0.28);
-  --input-text: #0d345e;
-  --accent: rgba(255, 255, 255, 0.94);
-  --accent-hover: #ffffff;
-  --success: #ffffff;
-  --text-success: rgba(13, 52, 94, 0.75);
-  --text-error: #ffe1e7;
-}
-
-html {
-  min-height: 100%;
-  overflow: hidden;
-  background-color: var(--hero-blue);
-  background-image: var(--hero-background);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+/* styles.css */
 
 @font-face {
-  font-family: 'PP Formula';
-  src: url('../fonts/PPFormula-Regular.otf') format('opentype');
+  font-family: "PP Neue Montreal";
+  src: url("../fonts/PPNeueMontreal-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'PP Pangram Sans';
-  src: url('../fonts/PPPangramSans-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-*, *::before, *::after {
+* {
   box-sizing: border-box;
+  transition: none !important;
 }
 
 body {
   margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fff;
+  color: #111;
   min-height: 100vh;
-  overflow: hidden;
-  font-family: 'PP Formula', 'PP Pangram Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: transparent;
-  color: var(--text-primary);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.stack {
+  width: min(600px, 100%);
+  margin: 0 auto;
+  padding: 64px 20px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: clamp(1.25rem, 4vw, 3rem);
+  flex: 1;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-color: var(--hero-blue);
-  background-image: var(--hero-background);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transform: translate3d(0, 0, 0);
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-main.hero {
+.logo {
+  max-width: 120px;
+  width: 100%;
+  align-self: center;
+  margin-bottom: 36px;
+}
+
+.hero {
+  width: 100%;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.stage {
+  position: relative;
+  width: min(900px, 100%);
+  aspect-ratio: 700 / 602;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+}
+
+.stage-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.stage-image--fullscreen {
+  left: 0;
+  right: 0;
   width: 100%;
 }
 
-.hero-inner {
-  width: min(520px, 100%);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+
+.stage-image--left {
+  left: 0;
+}
+
+
+.stage-image--right {
+  right: 0;
+}
+
+.stage-image.is-visible {
+  opacity: 1;
+}
+
+.content {
   align-items: center;
   text-align: center;
-  gap: 1.1rem;
-}
-.hero-logo {
-  width: 250px;
-  height: auto;
-  display: block;
+  margin-bottom: 10px;
 }
 
-.hero-tagline,
-.hero-announcement {
-  margin: 0;
-  font-size: 1.5rem; /* 24px */
-  color: var(--text-primary);
-}
-
-.hero-tagline {
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-}
-
-.hero-announcement {
-  font-weight: 400;
-  color: var(--text-muted);
-  margin-top: 0.15rem;
-}
-
-.mailchimp-form {
+img {
   width: 100%;
-  margin-top: 0.5rem;
+  object-fit: cover;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  font-family: "PP Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 32px;
+}
+
+.site-footer p {
+  font-size: 14px;
+  font-family: "PP Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+}
+
+/* Signup form */
+.signup form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.mailchimp-field {
-  position: relative;
+  gap: 12px;
+  margin-top: 8px;
   width: 100%;
-  max-width: 360px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mailchimp-field:focus-within {
-  transform: translateY(-1px);
-}
-
-.mailchimp-form input[type='email'] {
+.signup-row {
+  display: flex;
   width: 100%;
-  border-radius: 999px;
-  border: 1px solid var(--input-border);
-  background: var(--input-bg);
-  color: var(--input-text);
-  padding: 0.95rem 3.3rem 0.95rem 1.2rem;
-  font-size: 1rem;
-  line-height: 1.4;
-  box-shadow: 0 16px 32px rgba(7, 32, 58, 0.2);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  gap: 12px;
+  align-items: stretch;
 }
 
-.mailchimp-form input[type='email']::placeholder {
-  color: rgba(13, 52, 94, 0.55);
+input[type="email"] {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: "PP Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 2px;
+  border: 1px solid #ddd;
 }
 
-.mailchimp-form input[type='email']:focus {
-  outline: none;
-  border-color: rgba(10, 90, 223, 0.9);
-  background: #f4f8ff;
-  box-shadow: 0 22px 48px rgba(7, 32, 58, 0.26);
+input[type="email"]::placeholder {
+  font-family: "PP Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.mailchimp-submit {
-  position: absolute;
-  top: 50%;
-  right: 6px;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--input-border);
-  background: var(--accent);
-  color: var(--input-text);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: "PP Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 2px;
+  border: none;
+  background: #111;
+  color: white;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 14px 34px rgba(7, 32, 58, 0.24);
 }
 
-.mailchimp-submit:hover:not(.is-loading) {
-  transform: translateY(-50%) scale(1.05);
-  background: var(--accent-hover);
-  border-color: rgba(10, 90, 223, 0.55);
-}
-
-.mailchimp-field.is-success input[type='email'] {
-  border-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 16px 38px rgba(8, 35, 59, 0.4);
-}
-
-.mailchimp-field.is-success .mailchimp-submit {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--text-primary);
-}
-
-.mailchimp-status {
-  position: absolute;
-  top: 50%;
-  right: 52px;
-  transform: translateY(-50%) scale(0.6);
-  color: var(--text-primary);
-  opacity: 0;
-  font-size: 1rem;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.mailchimp-status.is-visible {
-  opacity: 1;
-  transform: translateY(-50%) scale(1);
-}
-
-.mailchimp-message {
-  min-height: 1.25rem;
-  margin: 0.4rem 0 0;
-  font-size: 0.92rem;
-  color: var(--text-success);
-  letter-spacing: 0.01em;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.mailchimp-message.is-visible {
-  opacity: 1;
-}
-
-.mailchimp-message.is-error {
-  color: var(--text-error);
+button:hover {
+  opacity: 0.8;
 }
 
 .sr-only {
@@ -233,82 +180,53 @@ main.hero {
   border: 0;
 }
 
-.mailchimp-arrow,
-.mailchimp-spinner {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.mailchimp-arrow {
-  display: flex;
+.mailchimp-form {
   width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  position: relative;
 }
 
-.mailchimp-arrow::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 8px solid #5a6776;
+.mailchimp-form button.is-loading {
+  opacity: 0.7;
+  pointer-events: none;
 }
 
-.mailchimp-spinner {
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(192, 202, 214, 0.95);
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+.mailchimp-message {
+  min-height: 1.25rem;
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-family: "PP Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #15803d;
+  text-align: center;
   opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: opacity 200ms ease;
 }
 
-.mailchimp-submit.is-loading {
-  cursor: wait;
-}
-
-.mailchimp-submit.is-loading .mailchimp-arrow {
-  opacity: 0;
-  transform: scale(0.65);
-}
-
-.mailchimp-submit.is-loading .mailchimp-spinner {
+.mailchimp-message.is-visible {
   opacity: 1;
 }
 
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+.mailchimp-message.is-error {
+  color: #b91c1c;
 }
 
 @media (max-width: 600px) {
-  body {
-    padding: clamp(1rem, 6vw, 2rem);
+  .logo {
+    max-width: 90px;
+    margin-bottom: 18px;
   }
 
-  .hero-inner {
-    width: min(90vw, 360px);
-    gap: 1rem;
+  .content p {
+    font-size: clamp(16px, 4.4vw, 20px);
+    line-height: 1.3;
+    white-space: nowrap;
   }
 
-  .mailchimp-form input[type='email'] {
-    padding-right: 3rem;
+  input[type="email"],
+  button {
+    font-size: 15px;
   }
 
-  .mailchimp-submit {
-    width: 36px;
-    height: 36px;
+  .signup-row {
+    gap: 10px;
   }
 }
+

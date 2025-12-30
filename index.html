@@ -1,44 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fort – Coming Soon</title>
-  <meta name="description" content="Fort is the easiest way to track and build strength." />
-  <link rel="icon" href="https://fort.cx/images/icon.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://fort.cx/images/social_preview.png" />
-  <meta property="og:title" content="Fort – Coming Soon" />
-  <meta property="og:description" content="The easiest way to track and build strength." />
-  <meta property="og:image" content="https://fort.cx/social_preview.png" />
-  <meta property="og:image:secure_url" content="https://fort.cx/social_preview.png" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
 
-<body>
-  <main class="hero">
-    <div class="hero-inner">
-      <img src="images/fort-spellout-logo.svg" alt="Fort wordmark" class="hero-logo" width="250" height="80" />
-      <p class="hero-tagline">The easiest way to track and build strength.</p>
-      <p class="hero-announcement">Coming Soon</p>
-      <form
-        action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&id=b3906d91a3&f_id=007037e7f0"
-        method="post"
-        class="mailchimp-form"
-        novalidate
-      >
-        <label for="hero-email" class="sr-only">Email address</label>
-        <div class="mailchimp-field">
-          <input id="hero-email" type="email" name="EMAIL" placeholder="Join Waitlist" required />
-          <button type="submit" class="mailchimp-submit" aria-label="Join waitlist">
-            <span class="mailchimp-spinner" aria-hidden="true"></span>
-            <span class="mailchimp-arrow" aria-hidden="true"></span>
-          </button>
-        </div>
-        <p class="mailchimp-message" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </main>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fort - Strength Training Wearable</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta property="og:title" content="Fort — Strength Training Wearable">
+        <meta property="og:description" content="Muscle-level insights from a thoughtfully designed wearable.">
+        <meta property="og:image" content="https://fort.cx/og-image.png">
+        <meta property="og:url" content="https://fort.cx">
+        <meta property="og:type" content="website">
+    </head>
 
-  <script src="js/script.js"></script>
-</body>
+    <body>
+        <main class="stack">
+            <section class="logo">
+            <img src="images/fort-spellout-logo-black-transparent.png" alt="Fort Logo">
+            </section>
+            
+            <section class="hero">
+                <div class="stage" id="stage">
+                    <img
+                        src="images/moodboard/fullscreen1-woman-stretching-outdoor.png"
+                        alt="Woman stretching outdoors"
+                        class="stage-image stage-image--fullscreen is-visible"
+                    />
+                </div>
+            </section>
+
+            <section class="content">
+                <p>
+                    The Easiest Way to Track and Build Strength.
+                </p>
+            </section>
+
+            <section class="signup">
+                <form
+                    action="https://fort.us19.list-manage.com/subscribe/post?u=669f4d4ef22e91de883061574&amp;id=b3906d91a3&amp;f_id=007037e7f0"
+                    method="post"
+                    class="mailchimp-form"
+                    novalidate
+                >
+                    <input type="hidden" name="u" value="669f4d4ef22e91de883061574" />
+                    <input type="hidden" name="id" value="b3906d91a3" />
+                    <input type="hidden" name="f_id" value="007037e7f0" />
+                    <label for="hero-email" class="sr-only">Email address</label>
+                    <div class="signup-row">
+                        <input
+                            id="hero-email"
+                            type="email"
+                            name="EMAIL"
+                            placeholder="Your Email"
+                            required
+                        />
+                        <button type="submit">Join Waitlist</button>
+                    </div>
+                    <div class="sr-only" aria-hidden="true">
+                        <input type="text" name="b_669f4d4ef22e91de883061574_b3906d91a3" tabindex="-1" value="" autocomplete="off" />
+                    </div>
+                    <p class="mailchimp-message" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <p>&copy; 2025 Fort. All rights reserved.</p>
+        </footer>
+        <script src="js/script.js" defer></script>
+    </body>
+
 </html>
