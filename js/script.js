@@ -1,5 +1,5 @@
 const FULLSCREEN_DURATION = 300;
-const PAIR_APPEAR_STAGGER = 300;
+const PAIR_APPEAR_STAGGER = 0;
 const PAIR_HOLD_DURATION = 300;
 const MAILCHIMP_ENDPOINT = "https://fort.us19.list-manage.com/subscribe/post-json";
 
